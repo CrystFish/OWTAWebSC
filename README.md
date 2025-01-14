@@ -1,4 +1,4 @@
-# Outer Wilds Text Adventure - Unofficial Web Port
+# Outer Wilds Text Adventure - 汉化网页版（施工中）
 
 A port of the Java-based [Outer Wilds Text Adventure](https://www.mobiusdigitalgames.com/outer-wilds-text-adventure.html) to the web. Play it live in your browser at [hawk.bar/OuterWildsTextAdventureWeb](https://hawk.bar/OuterWildsTextAdventureWeb).
 
