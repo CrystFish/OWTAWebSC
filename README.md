@@ -1,24 +1,15 @@
 # Outer Wilds Text Adventure - 汉化网页版（施工中）
 
-A port of the Java-based [Outer Wilds Text Adventure](https://www.mobiusdigitalgames.com/outer-wilds-text-adventure.html) to the web. Play it live in your browser at [hawk.bar/OuterWildsTextAdventureWeb](https://hawk.bar/OuterWildsTextAdventureWeb).
+[原项目](https://github.com/Hawkbat/OuterWildsTextAdventureWeb) 为 [Outer Wilds Text Adventure](https://www.mobiusdigitalgames.com/outer-wilds-text-adventure.html) 的网页移植版本，本项目为网页版提供了完整的简体中文本地化支持，访问 [crystfish.github.io/OuterWildsTextAdventureWeb（仍在施工...）](crystfish.github.io/OuterWildsTextAdventureWeb/) 在浏览器内体验文字版星际拓荒的魅力
 
-## Technical Details
+## 网页移植版的技术细节
 
-The original game is written in Java, and the source code and assets for it are included in the downloaded zip files containing the game. This made it possible to port the game to other platforms and languages.
+详见 [技术细节](https://github.com/CrystFish/OuterWildsTextAdventureWeb/blob/main/Technical_Details.md) 部分
 
-For the web port, the Java source code files were renamed to .ts (TypeScript) files and then edited line by line to convert the syntax to the new language. The largest issues encountered were:
-- Implicit class field accesses (e.g. simply `_myVar` instead of JavaScript's `this._myVar`), which required reviewing each variable reference by hand and adding `this.` where necessary. This was time-consuming but reasonably easy since the source code had no ambiguous usage.
-- Method overloads, especially with constructors, as JavaScript functions can only have a single implemention. These methods were rewritten into equivalent singular implementations using TypeScript's type unions and optional parameters.
-- The C-style type declarations (e.g. `String foo` instead of TypeScript's `foo: string`), which was addressed through aggressive Regex find-and-replace.
+# 版权相关事项
 
-The Java version of this game uses the [Processing](https://processing.org/) engine, which is a lightweight 'game engine' designed for creating graphical sketches and interactive visual demonstrations. The Processing Foundation also has a JavaScript version of this engine, [p5.js](https://p5js.org/), which has an extremely similar API, although obviously written for a different language. This meant that once the language syntax was converted, most functionality worked identically out of the box with no additional implementation code.
+所有资产和原始源代码均属于其原始版权所有者。本项目的作者不对上述资产或源代码（包括任何衍生材料）的版权提出任何要求
 
-A few methods and helper classes that did not have perfect equivalents in p5.js were written from scratch and placed in `compat.ts`.
+本项目仅用于教育目的
 
-# Copyright Notice
-
-All assets and the original source code belong to their original copyright holders. The authors of this project make no claim to the copyright of said assets or source code, including any derivative material.
-
-This project is intended for educational purposes only.
-
-The authors of this project will comply with any requests from the copyright holders.
+本项目的作者将遵守版权所有者的任何要求
