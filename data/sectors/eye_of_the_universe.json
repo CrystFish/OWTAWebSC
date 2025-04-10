@@ -1,29 +1,29 @@
 {
-  "Sector Arrival": {"text": "You warp into the Eye of the Universe"},
+  "Sector Arrival": {"text": "你跃迁到到了宇宙之眼"},
   "Nodes": {
     "Ancient Vessel 2": {
-      "name": "Ancient Vessel",
+      "name": "古飞船",
       "position": {
         "y": 200,
         "x": 0
       },
-      "explore": "The Vessel's warp drive is officially spent...looks like this is the end of the line.",
-      "description": "an ancient derelict",
+      "explore": "飞船跃迁装置的能量正式耗尽了...看来这就是旅途的终点",
+      "description": "一处古老的废墟",
       "gravity": false
     },
-    "The Eye of the Universe": {
+    "宇宙之眼": {
       "position": {
         "y": 0,
         "x": 0
       },
-      "explore": {"text": "see event screen", "fire event" : "older than the universe"},
-      "description": "???",
+      "explore": {"text": "查看事件屏幕", "fire event" : "older than the universe"},
+      "description": "？？？",
       "gravity": false
     }
   },
   "Connections": [
     {
-      "Node 2": "The Eye of the Universe",
+      "Node 2": "宇宙之眼",
       "Node 1": "Ancient Vessel 2"
     }
   ]

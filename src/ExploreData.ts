@@ -167,7 +167,7 @@ export class ExploreData
 	    		this._node.getConnection(pathArray.getString(i)).revealHidden();
 	    	}
 
-	    	feed.publish("you discover a hidden path!", true);
+	    	feed.publish("你发现了一条隐藏通道！", true);
 	    }
 	}
 

@@ -20,7 +20,7 @@ export class DatabaseScreen extends OWScreen implements ClueButtonObserver
   constructor()
   {
     super();
-    this.addButtonToToolbar(new Button("Close Database",  0, 0, 150, 50));
+    this.addButtonToToolbar(new Button("关闭数据库",  0, 0, 150, 50));
     this._clueRoot = new Entity(100, 140);
 
     // create clue buttons using PlayerData's list of clues
@@ -59,13 +59,13 @@ export class DatabaseScreen extends OWScreen implements ClueButtonObserver
     }
     else
     {
-      feed.publish("that doesn't help you right now", true);
+      feed.publish("那个现在还不能帮助到你", true);
     }
   }
 
   onButtonUp(button: Button): void
   {
-    if (button.id == "Close Database")
+    if (button.id == "关闭数据库")
     {
       gameManager.popScreen();
     }
@@ -87,7 +87,7 @@ export class DatabaseScreen extends OWScreen implements ClueButtonObserver
 
     rect(x, y, w, h);
 
-    let _displayText: string = "Select An Entry";
+    let _displayText: string = "选择一项条目";
 
     if (this._activeClue != null)
     {
@@ -95,7 +95,7 @@ export class DatabaseScreen extends OWScreen implements ClueButtonObserver
     }
     else if (playerData.getKnownClueCount() == 0)
     {
-      _displayText = "No Entries Yet";
+      _displayText = "暂无条目";
     }
 
     textFont(mediumFontData);

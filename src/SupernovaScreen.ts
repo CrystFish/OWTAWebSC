@@ -28,7 +28,7 @@ export class SupernovaScreen extends OWScreen
     this.supernovaTime = this.collapseTime + SupernovaScreen.COLLAPSE_DURATION;
 
     feed.clear();
-    feed.publish("the sun is going supernova!", true);
+    feed.publish("太阳正在演化为超新星！", true);
   }
   
   onExit(): void {}
@@ -157,7 +157,7 @@ export class GameOverScreen extends OWScreen
   constructor()
   {
     super();
-    this.addButtonToToolbar(new Button("Try Again"));
+    this.addButtonToToolbar(new Button("再次尝试"));
   }
 
   update(): void {}
@@ -167,7 +167,7 @@ export class GameOverScreen extends OWScreen
     fill(0, 90, 90);
     textAlign(CENTER, CENTER);
     textSize(100);
-    text("You Are Dead", width/2, height/2);
+    text("你死了", width/2, height/2);
   }
 
   onButtonUp(button: Button): void

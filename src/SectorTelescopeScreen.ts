@@ -25,8 +25,8 @@ export class SectorTelescopeScreen extends OWScreen
 		this.addButton(this._nextFrequency = new FrequencyButton(true));
 		this.addButton(this._previousFrequency = new FrequencyButton(false));
 
-		this.addButtonToToolbar(this._zoomOutButton = new Button("Zoom Out", 0, 0, 150, 50));
-		this.addButtonToToolbar(this._exitButton = new Button("Exit", 0, 0, 150, 50));
+		this.addButtonToToolbar(this._zoomOutButton = new Button("缩小", 0, 0, 150, 50));
+		this.addButtonToToolbar(this._exitButton = new Button("退出", 0, 0, 150, 50));
 	}
 
 	onEnter(): void

@@ -12,7 +12,7 @@ export class FrequencyButton extends Button
 
 	constructor(rightFacing: boolean)
 	{
-		super("Switch Frequency", width/2 + 140, 40, 50, 50);
+		super("切换频率", width/2 + 140, 40, 50, 50);
 
 		this._rightFacing = rightFacing;
 
@@ -66,11 +66,11 @@ export class Telescope
 		{
 			if (this._frequency == Frequency.BEACON)
 			{
-				frequencyText = "Unknown Frequency 001";
+				frequencyText = "未知频率 001";
 			}
 		    else if (this._frequency == Frequency.QUANTUM)
 		    {
-		    	frequencyText = "Unknown Frequency 002";
+		    	frequencyText = "未知频率 002";
 		    }
 		}
 

@@ -13,7 +13,7 @@ export class Comet extends Sector
 {  
   load(): void
   {
-    this._name = "the Comet";
+    this._name = "彗星";
     this.loadFromJSON("data/sectors/comet.json");
     //setAnchorOffset(100, 30);
   }
@@ -30,7 +30,7 @@ export class RockyTwin extends Sector
 {  
   load(): void
   {
-    this._name = "the rocky Hourglass Twin";
+    this._name = "余烬双星";
     this.loadFromJSON("data/sectors/rocky_twin.json");
     //setAnchorOffset(100, 30);
   }
@@ -47,7 +47,7 @@ export class SandyTwin extends Sector
 {  
   load(): void
   {
-    this._name = "the sandy Hourglass Twin";
+    this._name = "灰烬双星";
     this.loadFromJSON("data/sectors/sandy_twin.json");
     //setAnchorOffset(100, 30);
   }
@@ -64,7 +64,7 @@ export class TimberHearth extends Sector
 {  
   load(): void
   {
-    this._name = "Timber Hearth";
+    this._name = "木灶星";
     this.loadFromJSON("data/sectors/timber_hearth.json");
     //setAnchorOffset(100, 30);
   }
@@ -81,7 +81,7 @@ export class BrittleHollow extends Sector
 {  
   load(): void
   { 
-    this._name = "Brittle Hollow";
+    this._name = "碎空星";
     this.loadFromJSON("data/sectors/brittle_hollow.json");
   }
   
@@ -142,7 +142,7 @@ export class GiantsDeep extends Sector
 {  
   load(): void
   { 
-    this._name = "Giant's Deep";
+    this._name = "深巨星";
     this.loadFromJSON("data/sectors/giants_deep.json");
     this.setAnchorOffset(0, 60);
   }
@@ -176,7 +176,7 @@ export class DarkBramble extends Sector
 
   load(): void
   {
-    this._name = "Dark Bramble";
+    this._name = "黑荆星";
     this.loadFromJSON("data/sectors/dark_bramble.json");
 
     for (let i: number = 0; i < this._fogLightNodes.length; i++)
@@ -227,7 +227,7 @@ export class QuantumMoon extends Sector
 
   load(): void
   {
-    this._name = "Quantum Moon";
+    this._name = "量子卫星";
     this.loadFromJSON("data/sectors/quantum_moon.json");
     //setAnchorOffset(100, 30);
   }
@@ -317,7 +317,7 @@ export class EyeOfTheUniverse extends Sector
 {  
   load(): void
   {
-    this._name = "The Thing Older Than The Universe";
+    this._name = "比宇宙更为古老的事物";
     this.loadFromJSON("data/sectors/eye_of_the_universe.json");
   }
 

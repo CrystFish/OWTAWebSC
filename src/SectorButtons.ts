@@ -76,11 +76,11 @@ export abstract class SectorButton extends Button
     fill(0, 0, 0);
     stroke(0, 0, 100);
     rectMode(CENTER);
-    rect(this.screenPosition.x, this.screenPosition.y + this.getRadius() + 40, textWidth("L - Zoom In") + 10, 20);
+    rect(this.screenPosition.x, this.screenPosition.y + this.getRadius() + 40, textWidth("左键放大") + 10, 20);
 
     fill(0, 0, 100);
     textAlign(CENTER, CENTER);
-    text("L - Zoom In", this.screenPosition.x, this.screenPosition.y + this.getRadius() + 40);
+    text("左键放大", this.screenPosition.x, this.screenPosition.y + this.getRadius() + 40);
   }
 }
 
@@ -88,7 +88,7 @@ export class CometButton extends SectorButton
 {
   constructor(x: number, y: number, sector: Sector)
   {
-    super("The Comet", x, y, 40, 40, sector);
+    super("彗星", x, y, 40, 40, sector);
   }
   
   drawPlanet(): void
@@ -115,18 +115,18 @@ export class HourglassTwinsButton extends SectorButton
 
   constructor(centerX: number, y: number, isRightTwin: boolean, sector: Sector)
   {
-    super("Hourglass Twin", centerX, y, 50, 50, sector);
+    super("烬双星", centerX, y, 50, 50, sector);
     this._isRightTwin = isRightTwin;
     this._centerX = centerX;
     
     if (isRightTwin) 
     {
-      this._twinName = "Sandy ";
+      this._twinName = "灰";
       this.setPosition(centerX + 35, this.position.y);
     }
     else
     {
-      this._twinName = "Rocky ";
+      this._twinName = "余";
       this.setPosition(centerX - 35, this.position.y);
     }
   }
@@ -159,7 +159,7 @@ export class TimberHearthButton extends SectorButton
 {
   constructor(x: number, y: number, sector: Sector)
   {
-    super("Timber Hearth", x, y, 80, 80, sector);
+    super("木灶星", x, y, 80, 80, sector);
   }
   
   drawPlanet(): void
@@ -174,7 +174,7 @@ export class BrittleHollowButton extends SectorButton
 {
   constructor(x: number, y: number, sector: Sector)
   {
-    super("Brittle Hollow", x, y, 80, 80, sector);
+    super("碎空星", x, y, 80, 80, sector);
   }
   
   drawPlanet(): void
@@ -189,7 +189,7 @@ export class GiantsDeepButton extends SectorButton
 {
   constructor(x: number, y: number, sector: Sector)
   {
-    super("Giant's Deep", x, y, 150, 150, sector);
+    super("深巨星", x, y, 150, 150, sector);
   }
   
   drawPlanet(): void
@@ -204,7 +204,7 @@ export class DarkBrambleButton extends SectorButton
 {
   constructor(x: number, y: number, sector: Sector)
   {
-    super("Dark Bramble", x, y, 230, 230, sector);
+    super("黑荆星", x, y, 230, 230, sector);
   }
   
   drawPlanet(): void
@@ -222,7 +222,7 @@ export class QuantumMoonButton extends SectorButton
 
   constructor(targets: SectorButton[], sector: Sector)
   {
-    super("Quantum Moon", 0, 0, 30, 30, sector);
+    super("量子卫星", 0, 0, 30, 30, sector);
     this._targets = targets;
   }
 

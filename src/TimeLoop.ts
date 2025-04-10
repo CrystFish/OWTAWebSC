@@ -16,18 +16,18 @@ export class TimeLoop implements GlobalObserver
 		this._isTimeLoopEnabled = true;
 		this._triggerSupernova = false;
 		
-		feed.publish("You wake up next to a campfire near your village's launch tower. Today's the big day!");
-		feed.publish("In the sky, you notice a bright object flying away from Giant's Deep...", true);
+		feed.publish("你在村庄发射塔下的篝火旁醒来。今天是个大日子！");
+		feed.publish("在天上，你注意到一个明亮的物体正从深巨星飞离...", true);
 
 		messenger.addObserver(this);
 	}
 
 	onReceiveGlobalMessage(message: Message): void
 	{
-		if (message.id === "disable time loop" && this._isTimeLoopEnabled)
+		if (message.id === "关闭时间循环" && this._isTimeLoopEnabled)
 		{
 			this._isTimeLoopEnabled = false;
-			feed.publish("you disable the time loop device", true);
+			feed.publish("你关闭了时间循环装置", true);
 		}
 	}
 
@@ -57,7 +57,7 @@ export class TimeLoop implements GlobalObserver
 
 	waitFor(minutes: number): void
 	{
-		feed.publish("you chill out for 1 minute", true);
+		feed.publish("你等待了 1 分钟", true);
 		this.spendActionPoints(minutes);
 	}
 
@@ -73,7 +73,7 @@ export class TimeLoop implements GlobalObserver
 		// detect when you have 1/4 your action points remaining
 		if (lastActionPoints > TimeLoop.ACTION_POINTS_PER_LOOP * 0.25 && this._actionPoints <= TimeLoop.ACTION_POINTS_PER_LOOP * 0.25)
 		{
-			feed.publish("you notice the Sun is getting awfully big and red", true);
+			feed.publish("你注意到太阳正变得又大又红，十分糟糕", true);
 		}
 
 		if (this._actionPoints == 0)

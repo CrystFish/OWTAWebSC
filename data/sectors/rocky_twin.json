@@ -1,200 +1,200 @@
 {
-  "Sector Arrival": {"text": "The rocky Hourglass Twin is crisscrossed with canyons of striated rock, dotted with cacti, and harbors enough surface depressions to hint at an elaborate underground cave network.\n\nAn enormous funnel of sand stretches from one Hourglass twin to the other. Sand appears to be flowing off the surface of the sandy twin and draining into the canyons and caverns of the rocky twin."},
+  "Sector Arrival": {"text": "余烬双星上纵横交错着条纹状岩石峡谷，仙人掌点缀其间，地表凹陷处隐约可见复杂的地下洞穴网络\n\n巨大的沙漏从沙漏双星的一颗延伸到另一颗。沙子似乎从灰烬双星的表面流出，流入余烬双星的峡谷和洞穴中"},
   "Nodes": {
-    "Lakebed Cavern": {
+    "湖床洞穴": {
       "position": {
         "y": 77,
         "x": -1
       },
       "explore": {
-        "text": "You find the remains of a Nomai research outpost, including the skeletons of the late researchers. Disturbingly, the skeletons move whenever you stop looking at them.\n\nThis creepy behaviour is being caused by a shard of strange black rock in the center of the cavern (according to the Nomai researchers, it originated from the 'Moon That Wanders').\n\nThe researchers discovered that the quantum shard causes nearby objects to become quantum as well. This even works on living things (provided it's too dark to observe yourself or your surroundings).",
+        "text": "你发现了一个挪麦研究前哨站的遗迹，包括研究人员的骸骨。令人不安的是，只要你停止注视这些骸骨，它们就会移动\n\n这种令人毛骨悚然的现象是由洞穴中心的一块黑色岩石碎片造成的（据挪麦研究人员描述，这块碎片来自 “游荡的卫星”）\n\n研究人员发现，量子碎片会让附近的物体也拥有量子性质，甚至对生物也有效果（前提是光线太暗，无法观察自己或周边环境）",
         "discover clue": "QM_2"
       },
-      "description": "a dark cave with no way out",
+      "description": "一个封闭而黑暗的洞穴",
       "allow telescope": false,
       "signal": "QUANTUM",
       "entanglement node": true
     },
-    "Crashed Escape Pod": {
+    "坠毁的逃生舱": {
       "position": {
         "y": -181,
         "x": -95
       },
       "explore": {
-        "text": "You discover a crashed Nomai escape pod. According to its logs, it was launched from somewhere inside Dark Bramble.\n\nThe Nomai seem to have immediately retreated underground to escape the intense heat from the Sun.",
-        "reveal paths": ["Underground City"]
+        "text": "你发现了一个坠毁的逃生舱。根据日志描述，它是从黑荆星内部的某处发射的\n\n挪麦人似乎立即从逃生舱躲到了地下，以躲避太阳的强烈热量",
+        "reveal paths": ["地下城市"]
       },
       "entry point": true,
-      "description": "a crater with a crashed Nomai escape pod",
-      "reveal paths": ["Underground City"],
+      "description": "一个内有坠毁逃生舱的陨石坑",
+      "reveal paths": ["地下城市"],
       "signal": "BEACON"
     },
-    "Dried-up Lakebed": {
+    "干涸的湖床": {
       "position": {
         "y": 199,
         "x": -3
       },
       "explore": {
-        "text": "You meet a fellow traveler who is busy scanning the night sky through a telescope. They tell you of the 'Quantum Moon', a celestial body that moves when you're not looking at it. Apparently the Nomai were extremely interested in it for some reason.\n\nAs you roast a marshmallow, the travel explains that the enormous crater you're sitting in used to be a lake filled with water, just like the dried-up canyons used to be rivers.\n\nThe traveler tells you of a secret cave entrance at the bottom of the lake-bed, and mentions that the Nomai may have discovered something strange down there...",
-        "reveal paths": ["Lakebed Cavern"]
+        "text": "你遇到一位正忙着用望远镜扫视天空的旅行者。这位旅行者告诉了你关于“量子卫星”的事，这是一个不盯着就会瞬移的天体。显然，挪麦人出于某些原因而对它非常感兴趣\n\n在你烤棉花糖的时候，这位旅行者解释说，你所处的巨大深坑曾经是一个充满水的湖泊，就像干涸的峡谷也曾是河流一样\n\n旅行者告诉你湖床底部有一个秘密洞穴的入口，并提到挪麦人可能在下面发现了一些奇怪的东西...",
+        "reveal paths": ["湖床洞穴"]
       },
       "entry point": true,
-      "description": "a dried-up lakebed with a small campfire",
+      "description": "干涸的湖床与一堆篝火",
       "signal": "TRAVELER",
       "campfire": true
     },
-    "Small Cavern": {
+    "狭小的洞穴": {
       "position": {
         "y": 68,
         "x": -101
       },
-      "explore": {"text": "At first this cave seems unremarkable, but eventually you notice that sometimes (if you look away and back again) a large slab of unnatural-looking rock appears in the center of the cavern."},
-      "description": "a somewhat uninteresting cavern",
+      "explore": {"text": "起初，这个洞穴似乎并不起眼，但你发现，有时（如果你反复回头看），洞穴中央会出现一大块看起来很不自然的岩石"},
+      "description": "一个有点冷清的洞穴",
       "allow telescope": false,
       "signal": "QUANTUM",
       "entanglement node": true
     },
-    "Underground City": {
+    "地下城市": {
       "position": {
         "y": -87,
         "x": -5
       },
-      "explore": {"text": "You discover cliff dwellings nestled amongst the stalactites and stalagmites in an enormouse subterranean cavern.\n\nIt looks like the Nomai lived here for quite some time."},
-      "description": "a spectacular underground city",
+      "explore": {"text": "在一个巨大的地下洞穴中，你发现了钟乳石与石笋边的许多悬崖小屋\n\n看来挪麦人在这里生活了很长时间"},
+      "description": "一座壮观的地下城市",
       "allow telescope": false
     },
-    "Gravity Cannon": {
+    "重力炮": {
       "position": {
         "y": -61,
         "x": 163
       },
-      "explore": {"text": "It looks like this chamber was some sort of cannon the Nomai used to launch spacecraft to other planets."},
-      "description": "a cylindrical chamber lined with large metallic rings",
+      "explore": {"text": "这个地方看起来像是挪麦人用来向其他星球发射飞船的某种大炮"},
+      "description": "一个内衬大金属环的圆筒形腔体",
       "allow telescope": false
     },
-    "North Canyon": {"position": {
+    "北部峡谷": {"position": {
       "y": -79,
       "x": -184
     }},
-    "Arch Canyon": {
+    "拱形峡谷": {
       "position": {
         "y": -182,
         "x": 82
       },
       "explore": {
-        "text": "You find an old Nomai stargazing site perched at the top of the canyon.\n\nThe Nomai noticed a certain moon that would randomly appear in a different location whenever it was observed. They speculated that this 'Moon That Wanders' might be related to the Eye of the Universe and resolved to reach it.\n\nAt the bottom of the canyon, you discover two cave entrances leading underground!",
+        "text": "你发现一座古老的挪麦观测台就坐落在峡谷的顶端\n\n挪麦人注意到，每当观测卫星时，它都会随机出现在不同的位置。它们推测，这个“游荡的卫星”可能与宇宙之眼有关，并决心前往宇宙之眼\n\n在峡谷底部，你发现了两个通往地下的洞穴入口！",
         "reveal paths": [
-          "Underground City",
-          "Gravity Cannon"
+          "地下城市",
+          "重力炮"
         ]
       },
       "entry point": true,
-      "description": "a narrow canyon filled with arched rock formations",
+      "description": "一个具有拱形岩层的狭窄峡谷",
       "reveal paths": [
-        "Underground City",
-        "Gravity Cannon"
+        "地下城市",
+        "重力炮"
       ]
     },
-    "Fossil Site": {
+    "化石洞穴": {
       "position": {
         "y": -35,
         "x": -100
       },
       "explore": {
-        "text": "On the far side of the cavern you find a massive anglerfish fossil embedded in the cave wall. It's lure still has a faint glow to it.\n\nNearby you find the rules to what sounds like a children's game. One player (the 'anglerfish') would close their eyes and try to catch the other players (the 'escape pods') as they attempted to sneak past the anglerfish and reach the goal.",
+        "text": "在洞穴的远处，你发现了一块巨大的鮟鱇鱼化石嵌在洞壁上。它的诱饵还散发着微弱的光芒\n\n附近有一组听起来与儿童游戏相关的规则。一名玩家（鮟鱇鱼）会闭上眼睛，尝试抓住试图溜过鮟鱇鱼到达目标（逃生舱）的其他玩家",
         "discover clue": "D_2"
       },
-      "description": "a large cavern with an enormous fossil set into the wall",
+      "description": "一个巨大的洞穴，洞壁上镶嵌着一块巨大的化石",
       "allow telescope": false
     },
-    "Map Chamber": {
+    "地图室": {
       "position": {
         "y": 48,
         "x": 164
       },
       "explore": {
-        "text": "You find schematics for a giant machine the Nomai constructed on the Sandy Hourglass Twin.\n\nThe machine was designed to harness the energy from a supernova.\n\nThe control center is located inside a hollow cavity at the center of the planet, but it is completely sealed off from the surface.",
+        "text": "你在余烬双星上找到了挪麦人建造的巨型机器的图纸\n\n这台机器的设计利用了超新星的能量\n\n控制中心位于行星中心的一个中空空腔内，与地表完全隔绝",
         "discover clue": "TLD_3"
       },
-      "description": "the (under)ground floor of a large cylindrical tower",
+      "description": "一座高大圆柱形塔楼的底层",
       "allow telescope": false
     },
-    "South Canyon": {"position": {
+    "南部峡谷": {"position": {
       "y": 98,
       "x": -184
     }},
-    "Secret Refuge": {
+    "秘密避难所": {
       "position": {
         "y": 7,
         "x": -4
       },
-      "explore": {"text": "This place is a tomb. Ancient skeletons litter the ground. On the wall, you find a mural showing a nightmarish comet in the sky above the Hourglass Twins."},
-      "description": "a cramped cavern filled with skeletons",
+      "explore": {"text": "这里是一片坟墓。地上到处都是古老的骸骨。墙上还有一副壁画，展示着沙漏双星的上方有颗噩梦般的彗星"},
+      "description": "布满骸骨的狭小洞穴",
       "allow telescope": false
     }
   },
   "Connections": [
     {
-      "Node 2": "Lakebed Cavern",
-      "Node 1": "Dried-up Lakebed",
+      "Node 2": "湖床洞穴",
+      "Node 1": "干涸的湖床",
       "one-way": true,
       "hidden": true
     },
     {
-      "Node 2": "Dried-up Lakebed",
-      "Node 1": "Map Chamber",
+      "Node 2": "干涸的湖床",
+      "Node 1": "地图室",
       "one-way": true
     },
     {
-      "Node 2": "Secret Refuge",
-      "Node 1": "Underground City"
+      "Node 2": "秘密避难所",
+      "Node 1": "地下城市"
     },
     {
-      "Node 2": "Fossil Site",
-      "Node 1": "Underground City"
+      "Node 2": "化石洞穴",
+      "Node 1": "地下城市"
     },
     {
-      "Node 2": "Map Chamber",
-      "Node 1": "Gravity Cannon"
+      "Node 2": "地图室",
+      "Node 1": "重力炮"
     },
     {
-      "Node 2": "Underground City",
-      "Node 1": "Gravity Cannon"
+      "Node 2": "地下城市",
+      "Node 1": "重力炮"
     },
     {
-      "Node 2": "Underground City",
-      "Node 1": "Crashed Escape Pod",
+      "Node 2": "地下城市",
+      "Node 1": "坠毁的逃生舱",
       "hidden": true
     },
     {
-      "Node 2": "Underground City",
-      "Node 1": "Arch Canyon",
+      "Node 2": "地下城市",
+      "Node 1": "拱形峡谷",
       "hidden": true
     },
     {
-      "Node 2": "Crashed Escape Pod",
-      "Node 1": "Arch Canyon"
+      "Node 2": "坠毁的逃生舱",
+      "Node 1": "拱形峡谷"
     },
     {
-      "Node 2": "Gravity Cannon",
-      "Node 1": "Arch Canyon",
+      "Node 2": "重力炮",
+      "Node 1": "拱形峡谷",
       "hidden": true
     },
     {
-      "Node 2": "Crashed Escape Pod",
-      "Node 1": "North Canyon"
+      "Node 2": "坠毁的逃生舱",
+      "Node 1": "北部峡谷"
     },
     {
-      "Node 2": "Dried-up Lakebed",
-      "Node 1": "South Canyon"
+      "Node 2": "干涸的湖床",
+      "Node 1": "南部峡谷"
     },
     {
-      "Node 2": "South Canyon",
-      "Node 1": "North Canyon"
+      "Node 2": "南部峡谷",
+      "Node 1": "北部峡谷"
     },
     {
-      "Node 2": "South Canyon",
-      "Node 1": "Small Cavern"
+      "Node 2": "南部峡谷",
+      "Node 1": "狭小的洞穴"
     }
   ]
 }

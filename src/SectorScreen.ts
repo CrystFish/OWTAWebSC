@@ -41,13 +41,13 @@ export class SectorScreen extends OWScreen implements NodeButtonObserver, NodeAc
     this._ship = ship;
     this._sector = sector;
 
-    this.addButtonToToolbar(this._databaseButton = new Button("Use Database", 0, 0, 150, 50));
-    this.addButtonToToolbar(this._telescopeButton = new Button("Scan for Signals", 0, 0, 150, 50));
-    this._telescopeButton.setDisabledPrompt("Scan for Signals\n(view obstructed)");
+    this.addButtonToToolbar(this._databaseButton = new Button("查看数据库", 0, 0, 150, 50));
+    this.addButtonToToolbar(this._telescopeButton = new Button("扫描信号", 0, 0, 150, 50));
+    this._telescopeButton.setDisabledPrompt("扫描信号\n（视野受阻）");
 
-    this.addButtonToToolbar(this._waitButton  = new Button("Wait [1 min]", 0, 0, 150, 50));
-    this.addButtonToToolbar(this._liftoffButton  = new Button("Leave Sector", 0, 0, 150, 50));
-    this._liftoffButton.setDisabledPrompt("Leave Sector\n(must be at ship)");
+    this.addButtonToToolbar(this._waitButton  = new Button("等待 [ 1 分钟 ]", 0, 0, 150, 50));
+    this.addButtonToToolbar(this._liftoffButton  = new Button("离开该区域", 0, 0, 150, 50));
+    this._liftoffButton.setDisabledPrompt("离开该区域\n（必须位于飞船旁边）");
   }
 
   onEnter(): void
@@ -76,7 +76,7 @@ export class SectorScreen extends OWScreen implements NodeButtonObserver, NodeAc
       this._sector.removeActor(this._ship);
       gameManager.loadSolarSystemMap();
       feed.clear();
-      feed.publish("you leave " + this._sector.getName());
+      feed.publish("你已离开" + this._sector.getName());
     }
     else if (button == this._telescopeButton)
     {
@@ -113,7 +113,7 @@ export class SectorScreen extends OWScreen implements NodeButtonObserver, NodeAc
     }
     else
     {
-      feed.publish("that doesn't help you right now", true);
+      feed.publish("那个现在还不能帮助到你", true);
     }
   }
 

@@ -22,9 +22,9 @@ export class ExploreScreen extends OWScreen implements DatabaseObserver
 		this._exploreData = location.getExploreData();
 		this.overlay = true; // continue to render BG
 
-		this.addButtonToToolbar(this._databaseButton = new Button("Use Database", 0, 0, 150, 50));
-		this.addButtonToToolbar(this._waitButton  = new Button("Wait [1 min]", 0, 0, 150, 50));
-		this.addButtonToToolbar(this._backButton = new Button("Continue", 0, 0, 150, 50));
+		this.addButtonToToolbar(this._databaseButton = new Button("查看数据库", 0, 0, 150, 50));
+		this.addButtonToToolbar(this._waitButton  = new Button("等待 [ 1分钟 ]", 0, 0, 150, 50));
+		this.addButtonToToolbar(this._backButton = new Button("继续", 0, 0, 150, 50));
 
 		this._exploreData.parseJSON();
 	}
@@ -78,7 +78,7 @@ export class ExploreScreen extends OWScreen implements DatabaseObserver
 		}
 		else
 		{
-			feed.publish("that doesn't help you right now", true);
+			feed.publish("那个现在还不能帮助到你", true);
 		}
 	}
 

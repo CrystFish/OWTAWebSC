@@ -1,72 +1,72 @@
 {
-  "Sector Arrival": {"text": "The surface of Timber Hearth is covered in large forested craters, one of which is home to your entire species."},
-  "Nodes": {
-    "Ancient Mine": {
-      "position": {
-        "y": 11,
-        "x": -176
-      },
-      "explore": "The Nomai were mining this crater for raw materials. Judging from the amount of excavation, they must have been building something enormous.\n\nThere is also a dreamcatcher-like structure near the edge of the crater, and you notice fine grains of sand on a flat circular platform at the center.",
-      "entry point": true,
-      "description": "the ruins of a Nomai mining operation"
-    },
-    "Grotto": {
-      "position": {
-        "y": 11,
-        "x": -80
-      },
-      "explore": {
-        "text": "You discover Nomai research analysing the single-celled organisms they found living in this grotto.\n\nAs you peer into the depths of the pool, you spot an underwater tunnel!",
-        "reveal paths": ["Village"]
-      },
-      "description": "a rocky grotto with a pool of deep-looking water",
-      "allow telescope": false
-    },
-    "Moon": {
-      "position": {
-        "y": -179,
-        "x": 301
-      },
-      "explore": "You discover the ruins of a Nomai observatory.\n\nThey were trying to pick up a signal from something called the Eye of the Universe, but no signal was ever found.",
-      "entry point": true,
-      "description": "a small moon with a few Nomai ruins"
-    },
-    "Village": {
-      "position": {
-        "y": 11,
-        "x": 73
-      },
-      "explore": "You chat with your fellow townsfolk, and they wish you well on your expedition.",
-      "entry point": true,
-      "description": "a tiny rustic village nestled in a crater",
-      "campfire": true
-    },
-    "Observatory": {
-      "position": {
-        "y": -46,
-        "x": 176
-      },
-      "explore": {
-        "text": "You peruse the observatory museum's collection of artifacts brought back from previous space expeditions.\n\nThere's a large exhibit on the 'Nomai', a mysterious alien race that inhabited your solar system thousands of years ago. Very little is known about them, but many of their ruins can still be seen on various planets.\n\nYou talk to the curator and receive the launch codes. Your ship (the ORANGE TRIANGLE) is ready for liftoff!\n\nOn your way out of the museum, the eyes of a Nomai statue start to glow. You see a bright flash, followed by a series of strange images (including the sun going supernova).\n\nWell...that was odd.",
-        "fire event": "learn launch codes"
-      },
-      "description": "a small observatory perched on a ledge overlooking the village"
-    }
-  },
   "Connections": [
     {
-      "Node 2": "Grotto",
-      "Node 1": "Ancient Mine"
+      "Node 2": "石窟",
+      "Node 1": "古矿坑"
     },
     {
-      "Node 2": "Observatory",
-      "Node 1": "Village"
+      "Node 2": "天文台",
+      "Node 1": "村庄"
     },
     {
-      "Node 2": "Village",
-      "Node 1": "Grotto",
+      "Node 2": "村庄",
       "hidden": true,
-      "description": "an underwater passage through the center of the planet"
+      "Node 1": "石窟",
+      "description": "一条横穿星球中心的水下通道"
     }
-  ]
+  ],
+  "Sector Arrival": {"text": "木灶星表面满是覆盖着树木的环形山，其中一个是你们这一物种的家园"},
+  "Nodes": {
+    "卫星": {
+      "explore": "你发现了挪麦天文台的遗址\n\n挪麦人尝试捕获特定的信号，但一无所获，信号的源头被称作宇宙之眼",
+      "description": "有少量挪麦遗址的卫星",
+      "position": {
+        "x": 301,
+        "y": -179
+      },
+      "entry point": true
+    },
+    "村庄": {
+      "explore": "你与村民们交流了一番，他们祝你探险顺利",
+      "description": "环形山内的小村庄",
+      "position": {
+        "x": 73,
+        "y": 11
+      },
+      "campfire": true,
+      "entry point": true
+    },
+    "石窟": {
+      "explore": {
+        "text": "你发现挪麦人在研究分析它们在这个石窟中发现的单细胞生物\n\n当你探向水池深处时，你发现了一条水下密道！",
+        "reveal paths": ["村庄"]
+      },
+      "allow telescope": false,
+      "description": "一个石窟，内有深潭",
+      "position": {
+        "x": -80,
+        "y": 11
+      }
+    },
+    "古矿坑": {
+      "explore": "挪麦人在这个环形山开采原料。从挖掘量来看，他们一定是在建造什么庞然大物\n\n在环形山边缘还有一个类似捕梦网的结构，你注意到中心平坦的圆形平台上有细小的沙粒",
+      "description": "挪麦人采矿遗址",
+      "position": {
+        "x": -176,
+        "y": 11
+      },
+      "entry point": true
+    },
+    "天文台": {
+      "explore": {
+        "fire event": "learn launch codes",
+        "text": "你参观了天文台博物馆，都是在以前的探险中带回的文物收藏\n\n博物馆有一场关于\u201c挪麦文明\u201d的大型展览，\u201c挪麦\u201d是一个神秘的外星种族，数千年前曾居住在你们的太阳系中。人们对其知之甚少，但在各个星球上仍能看到他们的遗迹\n\n你与馆长交谈并获取了发射密码。你的飞船 (橙色三角形) 已准备起飞！\n\n在你走出博物馆的路上，挪麦雕像的眼睛开始发光。你眼前出现了闪光，伴以一系列奇异的图像（包括太阳演变为超新星的图像）\n\n嗯...好奇怪"
+      },
+      "description": "俯瞰村庄的小天文台",
+      "position": {
+        "x": 176,
+        "y": -46
+      }
+    }
+  }
 }

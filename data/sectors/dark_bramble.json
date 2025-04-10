@@ -1,20 +1,20 @@
 {
-  "Sector Arrival": {"text": "Dark Bramble is a twisted mass of throny vines shrouded in fog. Shards of ice and rock float around its perimeter, remnants of the host planet it outgrew long ago. Now that the sun is growing bigger and hotter, Dark Bramble is returning to life after a long period of dormancy.\n\nFew dare to venture into Dark Bramble's murky depths, and fewer still (specifically none) ever return.\n\nTurn back, you have so much to live for."},
+  "Sector Arrival": {"text": "黑荆星是一团扭曲的笼罩在浓雾之中的藤蔓。冰与岩的碎片漂浮在其周围，这是它很久之前在宿主星球上肆意生长时的残余。随着太阳变得越来越大、越来越热，黑荆星在经历了漫长的休眠期后又恢复了生机\n\n很少有人敢于冒险进入黑荆星阴暗的深处，极少数人（具体来说是一个也没有）能够活着回来\n\n回头吧，你还有很多值得继续活下去的理由"},
   "Nodes": {
-    "Crashed Escape Pod": {
+    "坠毁的逃生舱": {
       "position": {
         "y": 72,
         "x": -125
       },
       "explore": {
-        "text": "You find the barely-recognizable remains of a Nomai escape pod entangled in a web of vines. You also find a cave in a nearby asteroid where the remaining Nomai took shelter after the crash.\n\nThe survivors discovered that Dark Bramble is actually a giant interdimensional carnivorous plant, and theorized that if they could get a tracking device inside one of the vines, they might be able to follow it back to the roots of Dark Bramble (where the Vessel crashed).",
+        "text": "你发现了一个几乎无法辨认的挪麦逃生舱残骸，它被藤蔓缠绕着。你还在附近发现了一个洞穴，坠毁后剩余的挪麦人就躲在那里\n\n幸存下来的挪麦人们发现，黑荆实际上是一种巨大的跨次元食肉植物，它们推测，如果能在其中一根荆棘上安装追踪装置，也许就能跟随它回到黑荆的根部（飞船坠毁的地方）",
         "discover clue": "D_3"
       },
       "entry point": true,
-      "description": "a crashed ancient escape pod",
+      "description": "一艘坠毁的古逃生舱",
       "fog light": true,
       "signal": "BEACON",
-      "probe description": "a light shining through the fog",
+      "probe description": "一束光穿过雾气",
       "gravity": false
     },
     "Anglerfish": {
@@ -31,7 +31,7 @@
       },
       "anglerfish": true
     },
-    "Bramble Outskirts": {
+    "黑荆星外围": {
       "position": {
         "y": 4,
         "x": -335
@@ -41,22 +41,22 @@
         "fire event": "explore bramble outskirts"
       },
       "entry point": true,
-      "description": "a group of flowering vines",
+      "description": "一簇开花的藤蔓",
       "ship access": true,
       "gravity": false
     },
-    "Frozen Jellyfish": {
+    "冰冻水母": {
       "position": {
         "y": 143,
         "x": 108
       },
       "explore": {
-        "text": "You find a giant jellyfish frozen in a floating chunk of ice. It doesn't appear electrically-charged, so you move in to investigate.\n\nYou examine the specimen and discover a hollow body cavity just big enough to fit a person. Is this what the traveler was talking about?",
+        "text": "你在一块浮冰中发现了一只巨大的水母。它看起来没有带电，所以你直接进去调查\n\n你检查了水母，发现其体腔中空，大得足以容纳一个人。这就是旅行者所说的吗？",
         "discover clue": "APL_3"
       },
-      "description": "a frozen jellyfish",
+      "description": "冰冻水母",
       "ship access": true,
-      "probe description": "a jellyfish encased in a huge chunk of ice",
+      "probe description": "一只被冰封在巨大冰块中的水母",
       "gravity": false
     },
     "Anglerfish2": {
@@ -87,7 +87,7 @@
       },
       "anglerfish": true
     },
-    "Ancient Vessel": {
+    "古飞船": {
       "position": {
         "y": 47,
         "x": -24
@@ -97,7 +97,7 @@
         "fire event": "explore ancient vessel"
       },
       "entry point": false,
-      "description": "an Ancient derelict",
+      "description": "古飞船遗址",
       "ship access": true,
       "gravity": false
     },
@@ -108,26 +108,26 @@
       },
       "anglerfish": true
     },
-    "Anglerfish Skeleton": {
+    "鮟鱇鱼骨架": {
       "position": {
         "y": -44,
         "x": 51
       },
       "explore": {
-        "text": "You meet a grisled traveler living inside the skeleton of a dead anglerfish (its lure is still glowing...maybe it keeps the other anglerfish away).\n\nEven though he's been stranded here for quite some time, he doesn't seem overly eager to head back to civilization.\n\nIn return for not telling anyone his whereabouts, he tells you about a nearby location that holds a secret to reaching the center of Giant's Deep.",
-        "reveal paths": ["Frozen Jellyfish"]
+        "text": "你在一条死去的鮟鱇鱼的骨架里遇到了一个灰头土脸的旅行者（鮟鱇鱼的诱饵还在发光，也许它能让其他鮟鱇鱼远离它）\n\n尽管他被困在这里已经有一段时间了，但他似乎并不急于返回文明世界\n\n作为不告诉任何人有关他行踪的回报，他告诉了你不远处的一个地点，那里有一个与抵达深巨星核心有关的秘密",
+        "reveal paths": ["冰冻水母"]
       },
       "entry point": true,
-      "description": "the skeleton of an anglerfish",
+      "description": "一条鮟鱇鱼的骨架",
       "fog light": true,
       "signal": "TRAVELER",
-      "probe description": "a light shining through the fog",
+      "probe description": "一束光穿过雾气",
       "gravity": false
     }
   },
   "Connections": [{
-    "Node 2": "Frozen Jellyfish",
-    "Node 1": "Anglerfish Skeleton",
+    "Node 2": "冰冻水母",
+    "Node 1": "鮟鱇鱼骨架",
     "hidden": true
   }]
 }

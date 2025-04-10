@@ -38,8 +38,8 @@ export let smallFontData: Font;
 export let mediumFontData: Font;
 
 (window as any).preload = function preload(): void {
-  smallFontData = loadFont("data/fonts/Inconsolata.ttf");
-  mediumFontData = loadFont("data/fonts/Inconsolata.ttf");
+  smallFontData = loadFont("data/fonts/JiangChengYuanTi-400W.ttf");
+  mediumFontData = loadFont("data/fonts/JiangChengYuanTi-400W.ttf");
   preloadAudio("data/audio/ow_kazoo_theme.mp3");
   preloadJSONObject("data/sectors/brittle_hollow.json");
   preloadJSONObject("data/sectors/comet.json");
@@ -125,11 +125,11 @@ export function frequencyToString(frequency: Frequency): string
   switch(frequency)
   {
     case Frequency.TRAVELER:
-      return "Traveler Frequency";
+      return "旅行者频率";
     case Frequency.BEACON:
-      return "Distress Beacon";
+      return "求救信标";
     case Frequency.QUANTUM:
-      return "Quantum Fluctuations";
+      return "量子波动";
     default:
       return "";
   }

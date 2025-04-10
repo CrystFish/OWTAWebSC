@@ -70,7 +70,7 @@ export class NodeConnection
 
   getWrongWayText(): string
   {
-    return "looks like this path is only traversible from the other direction";
+    return "看起来这条路只能从另一侧才能通行";
   }
 
   getOtherNode(node: OWNode): OWNode

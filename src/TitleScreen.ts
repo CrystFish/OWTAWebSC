@@ -13,10 +13,10 @@ export class TitleScreen extends OWScreen
     super();
     
     if (GameSave.hasData()) {
-      this.addTitleButton("Continue", 110);
-      this.addTitleButton("Reset Progress", -110);
+      this.addTitleButton("继续", 110);
+      this.addTitleButton("重置进度", -110);
     } else {
-      this.addTitleButton("New Game", 0);
+      this.addTitleButton("新游戏", 0);
     }
   }
 
@@ -53,16 +53,16 @@ export class TitleScreen extends OWScreen
     
     fill(0, 0, 100);
     textSize(22);
-    text("a thrilling graphical text adventure", width/2, height/2 + 50);
+    text("一场惊心动魄的图形文本冒险", width/2, height/2 + 50);
   }
   
   onButtonUp(button: Button): void
   {
-    if (button.id == "New Game" || button.id == "Continue")
+    if (button.id == "新游戏" || button.id == "继续")
     {
       gameManager.loadSector(SectorName.TIMBER_HEARTH);
     }
-    else if (button.id == "Reset Progress")
+    else if (button.id == "重置进度")
     {
       GameSave.clearData();
       exit();
@@ -75,7 +75,7 @@ export class EndScreen extends OWScreen
   constructor()
   {
     super();
-    this.addButton(new Button("Exit", width/2, height - 50, 200, 50));
+    this.addButton(new Button("退出", width/2, height - 50, 200, 50));
   }
   
   onEnter(): void
@@ -101,12 +101,12 @@ export class EndScreen extends OWScreen
     
     fill(0, 0, 100);
     textSize(22);
-    text("thanks for playing!", width/2, height/2 + 50);
+    text("感谢游玩！", width/2, height/2 + 50);
   }
   
   onButtonUp(button: Button): void
   {
-    if (button.id == "Exit")
+    if (button.id == "退出")
     {
       exit();
     }

@@ -1,26 +1,26 @@
 {
-  "Sector Arrival": {"text": "Welcome to the Comet"},
+  "Sector Arrival": {"text": "欢迎来到彗星"},
   "Nodes": {
-    "Ice Cave": {
+    "冰穴": {
       "position": {
         "y": 4,
         "x": 5
       },
-      "explore": {"text": "You explore the cavern inside the core of the comet and discover a strange glowing material frozen in the ice. Nomai skeletons are everywhere...presumably the ill-fated crew of the spacecraft on the surface."},
-      "description": "a small icy cavern"
+      "explore": {"text": "你探索了彗星内部中心的冰穴，发现了一种冻结在冰层中的奇怪发光物质。挪麦人的骸骨无处不在......大概是地表上那艘飞船的命运多舛的驾驶者们"},
+      "description": "冰穴"
     },
-    "Ice Field": {
+    "冰面": {
       "position": {
         "y": 4,
         "x": -92
       },
-      "explore": {"text": "You discover the remains of a small Nomai spacecraft on the comet's icy surface. Its records indicate that it was launched from the Hourglass Twins on an urgent mission."},
+      "explore": {"text": "你在彗星冰冷的地表上发现了一艘小型挪麦飞船的残骸。日志表明其从沙漏双星发射，执行一项紧急任务"},
       "entry point": true,
-      "description": "a barren icy surface"
+      "description": "荒芜的冰面"
     }
   },
   "Connections": [{
-    "Node 2": "Ice Cave",
-    "Node 1": "Ice Field"
+    "Node 2": "冰穴",
+    "Node 1": "冰面"
   }]
 }
