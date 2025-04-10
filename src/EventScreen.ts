@@ -40,27 +40,79 @@ export abstract class EventScreen extends OWScreen implements DatabaseObserver
 
 	renderBackground(): void {}
 
-	render(): void
-	{
+	render(): void {
 		push();
-		translate(width/2 - EventScreen.BOX_WIDTH/2, height/2 - EventScreen.BOX_HEIGHT/2);
+		translate(width / 2 - EventScreen.BOX_WIDTH / 2, height / 2 - EventScreen.BOX_HEIGHT / 2);
 
-			stroke(0, 0, 100);
-			fill(0, 0, 0);
-			rectMode(CORNER);
-			rect(0, 0, EventScreen.BOX_WIDTH, EventScreen.BOX_HEIGHT);
+		stroke(0, 0, 100);
+		fill(0, 0, 0);
+		rectMode(CORNER);
+		rect(0, 0, EventScreen.BOX_WIDTH, EventScreen.BOX_HEIGHT);
 
-			fill(0, 0, 100);
+		fill(0, 0, 100);
 
-		    textFont(mediumFontData);
-		    textSize(18);
-			textAlign(LEFT, TOP);
-			text(this.getDisplayText(), 10, 10, EventScreen.BOX_WIDTH - 20, EventScreen.BOX_HEIGHT - 20);
+		textFont(mediumFontData);
+		textSize(18);
+		textAlign(LEFT, TOP);
+
+		// 获取需要显示的文本
+		const displayText = this.getDisplayText();
+		const wrappedLines = this.wrapText(displayText, EventScreen.BOX_WIDTH - 20); // 自动换行处理
+
+		let y = 10; // 初始 y 坐标
+		const lineHeight = 24; // 固定行高，确保行间距足够
+
+		for (const line of wrappedLines) {
+			if (line === "") {
+				// 如果是空行，直接增加 y 坐标，保留空行
+				y += lineHeight;
+			} else {
+				text(line, 10, y); // 绘制每一行文本
+				y += lineHeight; // 增加 y 坐标，确保下一行不会重叠
+			}
+		}
 
 		pop();
 
 		feed.render();
 		timeLoop.renderTimer();
+	}
+
+	/**
+	 * 自动换行函数：根据最大宽度将文本分割成多行，并保留空行
+	 * @param text 原始文本
+	 * @param maxWidth 最大宽度
+	 * @returns 分割后的多行文本数组
+	 */
+	wrapText(text: string, maxWidth: number): string[] {
+		const lines: string[] = [];
+		const paragraphs = text.split('\n'); // 按换行符分割段落
+
+		for (const paragraph of paragraphs) {
+			if (paragraph.trim() === "") {
+				// 如果段落是空的，保留空行
+				lines.push("");
+				continue;
+			}
+
+			let currentLine = "";
+
+			for (const char of paragraph) {
+				const testLine = currentLine + char;
+				if (textWidth(testLine) > maxWidth) {
+					lines.push(currentLine); // 当前行已满，保存
+					currentLine = char; // 开始新的一行
+				} else {
+					currentLine = testLine; // 继续添加字符
+				}
+			}
+
+			if (currentLine) {
+				lines.push(currentLine); // 保存最后一行
+			}
+		}
+
+		return lines;
 	}
 
 	onButtonUp(button: Button): void

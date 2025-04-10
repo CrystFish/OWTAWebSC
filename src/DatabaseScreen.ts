@@ -102,9 +102,61 @@ export class DatabaseScreen extends OWScreen implements ClueButtonObserver
     textSize(18);
     textAlign(LEFT, TOP);
     fill(0, 0, 100);
-    text(_displayText, x + 10, y + 10, w - 20, h - 20);
+
+    // 自动换行处理
+    const wrappedLines = this.wrapText(_displayText, w - 20);
+
+    let currentY = y + 10; // 初始 y 坐标
+    const lineHeight = 24; // 行高
+
+    for (const line of wrappedLines) {
+        if (line === "") {
+            // 如果是空行，增加 y 坐标，保留空行
+            currentY += lineHeight;
+        } else {
+            text(line, x + 10, currentY); // 绘制每一行文本
+            currentY += lineHeight; // 增加 y 坐标，确保下一行不会重叠
+        }
+    }
 
     feed.render();
+  }
+
+  /**
+   * 自动换行函数：根据最大宽度将文本分割成多行，并保留空行
+   * @param text 原始文本
+   * @param maxWidth 最大宽度
+   * @returns 分割后的多行文本数组
+   */
+  wrapText(text: string, maxWidth: number): string[] {
+    const lines: string[] = [];
+    const paragraphs = text.split('\n'); // 按换行符分割段落
+
+    for (const paragraph of paragraphs) {
+        if (paragraph.trim() === "") {
+            // 如果段落是空的，保留空行
+            lines.push("");
+            continue;
+        }
+
+        let currentLine = "";
+
+        for (const char of paragraph) {
+            const testLine = currentLine + char;
+            if (textWidth(testLine) > maxWidth) {
+                lines.push(currentLine); // 当前行已满，保存
+                currentLine = char; // 开始新的一行
+            } else {
+                currentLine = testLine; // 继续添加字符
+            }
+        }
+
+        if (currentLine) {
+            lines.push(currentLine); // 保存最后一行
+        }
+    }
+
+    return lines;
   }
 }
 
