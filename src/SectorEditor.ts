@@ -14,7 +14,7 @@ export class SectorEditor implements NodeButtonObserver, ButtonObserver
   constructor(sector: Sector)
   {
     this._activeSector = sector;
-    this._saveButton = new Button("Save", width - 75, height - 50, 100, 50);
+    this._saveButton = new Button("保存", width - 75, height - 50, 100, 50);
     this._saveButton.setObserver(this);
   }
   

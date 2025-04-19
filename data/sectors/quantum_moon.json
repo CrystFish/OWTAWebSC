@@ -1,47 +1,47 @@
 {
-  "Sector Arrival": {"text": "Welcome to the Quantum Moon"},
+  "Sector Arrival": {"text": "欢迎来到量子卫星"},
   "Nodes": {
-    "Quantum Desert": {
+    "量子沙漠": {
       "position": {
         "y": -36,
         "x": -2
       },
       "quantum location" : 0,
-      "explore": "The surface of the moon is covered in sand and populated with cacti that change locations when you're not looking at them.",
+      "explore": "卫星表面被沙子覆盖，上面长满了仙人掌，当你未注视它们时，它们的位置会改变",
       "entry point": true,
-      "description": "a quantum desert"
+      "description": "一片量子沙漠"
     },
-    "Quantum Forest": {
+    "量子森林": {
       "position": {
         "y": -36,
         "x": -2
       },
       "quantum location" : 1,
-      "explore": "You find yourself in a forest of trees that change locations when you're not looking at them. Strangely, you also spot a lamp and a signpost from your village. What are they doing here?",
+      "explore": "你发现自己被树木环绕，当你未注视它们时，它们的位置会改变。奇怪的是，你还发现了村子里的一盏灯和一个路标。它们为什么会在这里？",
       "entry point": true,
-      "description": "a quantum forest"
+      "description": "一片量子森林"
     },
-    "Quantum Glacier": {
+    "量子冰原": {
       "position": {
         "y": -36,
         "x": -2
       },
       "quantum location" : 2,
-      "explore": "The surface of the moon is covered in ice. A few craggly trees (and a couple of Ancient lamps) change locations when you're not looking at them.",
+      "explore": "卫星表面被冰川覆盖。几棵弯弯折折的树（和几盏古老的灯）在你未注视它们时会改变位置",
       "entry point": true,
-      "description": "a quantum glacier"
+      "description": "一片量子冰原"
     },
-    "Quantum Wetlands": {
+    "量子湿地": {
       "position": {
         "y": -36,
         "x": -2
       },
       "quantum location" : 3,
-      "explore": "The surface of the moon is covered in water. The small, ethereal jellyfish floating above it change locations when you're not looking at them.",
+      "explore": "卫星表面被水覆盖。小而空灵的水母漂浮于其中，当你未注视它们时，它们的位置会改变",
       "entry point": true,
-      "description": "quantum wetlands"
+      "description": "一片量子水域"
     },
-    "Quantum Flats": {
+    "量子平地": {
       "position": {
         "y": -36,
         "x": -2
@@ -49,12 +49,12 @@
       "quantum location" : 4,
       "explore": 
       {
-        "text" : "You walk onto a flat expanse dotted with piles of quantum rocks that move when you're not looking at them. To your great surprise, a living Ancient stands before you.\n\n The Ancient tells you that the Quantum Moon is actually a piece of whatever the source of the Signal actually is. It gestures to the sky, and you look up to see a distant otherworldly energy cloud surrounded by hundreds of quantum moons.\n\nThe Ancient doesn't know what it is, except that it seems to be the root cause of all quantumn phenoma. If that's true, then what is inside the cloud, and what would happen if it's ever observed by a concious entity?"
+        "text" : "你走到了一片平坦的地面上，上面散布着成堆的量子岩石，当你未注视它们时，这些岩石会移动。令你大吃一惊的是，一位活生生的挪麦古人站在你面前\n\n古人告诉你，量子卫星实际上是信号来源的一部分。它指向天空，你抬头看到遥远的超凡的能量云，周围环绕着数百个量子卫星\n\n古人不知道它是什么，只知道它似乎是所有量子现象的根本原因。如果这是真的，那么云里有什么？如果它被一个有意识的实体观察到又会发生什么？"
       },
       "entry point": true,
-      "description": "a lone figure standing in a field of quantum rocks"
+      "description": "一片布满了量子岩石的平地，高大身影在此矗立"
     },
-    "Quantum Tower": {
+    "量子塔楼": {
       "position": {
         "y": 90,
         "x": -4
@@ -63,11 +63,11 @@
       "entanglement node" : true,
       "explore": 
       {
-        "text" : "You keep your gaze fixed on the ancient tower (so it doesn't change locations as you approach it) and walk inside. There doesn't seem to be anything of interest, although it is extremely dark in here."
+        "text" : "你的目光盯着这座古老的塔楼（这样它就不会在你靠近它时改变位置）然后走进去。尽管里面非常黑暗，但似乎没有什么有趣的东西"
       },
-      "description": "an ancient tower"
+      "description": "一座古老的塔楼"
     },
-    "Quantum Cabin": {
+    "量子木屋": {
       "position": {
         "y": 90,
         "x": -4
@@ -76,11 +76,11 @@
       "entanglement node" : true,
       "explore": 
       {
-        "text" : "You keep your gaze fixed on the log cabin (so it doesn't change locations as you approach it) and walk inside. There doesn't seem to be anything of interest, although it is extremely dark in here."
+        "text" : "你的目光盯着这座小木屋（这样它就不会在你靠近它时改变位置）然后走进去。尽管里面非常黑暗，但似乎没有什么有趣的东西"
       },
-      "description": "a cabin from your village"
+      "description": "一间来自村庄的小木屋"
     },
-    "Quantum Cliff Dwelling": {
+    "量子悬屋": {
       "position": {
         "y": 90,
         "x": -4
@@ -89,11 +89,11 @@
       "entanglement node" : true,
       "explore": 
       {
-        "text" : "You keep your gaze fixed on the ancient cliff dwelling (so it doesn't change locations as you approach it) and walk inside. There doesn't seem to be anything of interest, although it is extremely dark in here."
+        "text" : "你的目光盯着这座悬崖边的古老房屋（这样它就不会在你靠近它时改变位置）然后走进去。尽管里面非常黑暗，但似乎没有什么有趣的东西"
       },
-      "description": "an ancient cliff dwelling"
+      "description": "一座悬崖边的古老房屋"
     },
-    "Quantum Research Station": {
+    "量子研究站": {
       "position": {
         "y": 90,
         "x": -4
@@ -102,11 +102,11 @@
       "entanglement node" : true,
       "explore": 
       {
-        "text" : "You keep your gaze fixed on the ancient research station (so it doesn't change locations as you approach it) and walk inside. There doesn't seem to be anything of interest, although it is extremely dark in here."
+        "text" : "你的目光盯着这个古研究站（这样它就不会在你靠近它时改变位置）然后走进去。尽管里面非常黑暗，但似乎没有什么有趣的东西"
       },
-      "description": "an ancient research station"
+      "description": "一座古研究站"
     },
-    "Quantum Shrine": {
+    "量子祭坛": {
       "position": {
         "y": 90,
         "x": -4
@@ -116,25 +116,25 @@
       "signal": "QUANTUM",
       "explore": 
       {
-        "text" : "The Nomai seem to have constructed some sort of shrine in honor of the Signal. It's pitch black inside."
+        "text" : "挪麦人似乎为了纪念信号而建造了某种祭坛，里面一片漆黑"
       },
-      "description": "an ancient shrine"
+      "description": "一座古祭坛"
     }
   },
   "Connections": [{
-    "Node 2": "Quantum Tower",
-    "Node 1": "Quantum Desert"
+    "Node 2": "量子塔楼",
+    "Node 1": "量子沙漠"
   },{
-    "Node 2": "Quantum Cabin",
-    "Node 1": "Quantum Forest"
+    "Node 2": "量子木屋",
+    "Node 1": "量子森林"
   },{
-    "Node 2": "Quantum Cliff Dwelling",
-    "Node 1": "Quantum Glacier"
+    "Node 2": "量子悬屋",
+    "Node 1": "量子冰原"
   },{
-    "Node 2": "Quantum Research Station",
-    "Node 1": "Quantum Wetlands"
+    "Node 2": "量子研究站",
+    "Node 1": "量子湿地"
   },{
-    "Node 2": "Quantum Shrine",
-    "Node 1": "Quantum Flats"
+    "Node 2": "量子祭坛",
+    "Node 1": "量子平地"
   }]
 }

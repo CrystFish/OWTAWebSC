@@ -57,7 +57,7 @@ export class GameManager extends ScreenManager implements GlobalObserver
     this._telescope = new Telescope();
 
     this._solarSystem = new SolarSystem();
-    this._solarSystem.timberHearth.addActor(this._solarSystem.player, "Village");
+    this._solarSystem.timberHearth.addActor(this._solarSystem.player, "村庄");
 
     this.solarSystemMapScreen = new SolarSystemMapScreen(this._solarSystem);
 

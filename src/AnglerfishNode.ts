@@ -16,18 +16,18 @@ export class AnglerfishNode extends OWNode
 
 	getKnownName(): string
 	{
-		if (this._visited) return "Anglerfish";
-		else return "???";
+		if (this._visited) return "鮟鱇鱼";
+		else return "？？？";
 	} 
 
 	getDescription(): string 
 	{
-		return "an enormous hungry-looking anglerfish";
+		return "一条巨大而饥饿的鮟鱇鱼";
 	}
 
 	getProbeDescription(): string 
 	{
-		return "a light shining through the fog";
+		return "一束光穿过雾气";
 	}
 
 	hasDescription(): boolean {return true;}

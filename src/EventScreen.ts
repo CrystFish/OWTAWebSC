@@ -23,44 +23,96 @@ export abstract class EventScreen extends OWScreen implements DatabaseObserver
 
 	initButtons(): void
 	{
-		this.addButtonToToolbar(this._nextButton = new Button("Continue", 0, 0, 150, 50));
+		this.addButtonToToolbar(this._nextButton = new Button("继续", 0, 0, 150, 50));
 	}
 
 	addDatabaseButton(): void
 	{
-		this.addButtonToToolbar(this._databaseButton = new Button("Use Database", 0, 0, 150, 50));
+		this.addButtonToToolbar(this._databaseButton = new Button("查看数据库", 0, 0, 150, 50));
 	}
 
 	addContinueButton(): void
 	{
-		this.addButtonToToolbar(this._nextButton = new Button("Continue", 0, 0, 150, 50));
+		this.addButtonToToolbar(this._nextButton = new Button("继续", 0, 0, 150, 50));
 	}
 
 	update(): void{}
 
 	renderBackground(): void {}
 
-	render(): void
-	{
+	render(): void {
 		push();
-		translate(width/2 - EventScreen.BOX_WIDTH/2, height/2 - EventScreen.BOX_HEIGHT/2);
+		translate(width / 2 - EventScreen.BOX_WIDTH / 2, height / 2 - EventScreen.BOX_HEIGHT / 2);
 
-			stroke(0, 0, 100);
-			fill(0, 0, 0);
-			rectMode(CORNER);
-			rect(0, 0, EventScreen.BOX_WIDTH, EventScreen.BOX_HEIGHT);
+		stroke(0, 0, 100);
+		fill(0, 0, 0);
+		rectMode(CORNER);
+		rect(0, 0, EventScreen.BOX_WIDTH, EventScreen.BOX_HEIGHT);
 
-			fill(0, 0, 100);
+		fill(0, 0, 100);
 
-		    textFont(mediumFontData);
-		    textSize(18);
-			textAlign(LEFT, TOP);
-			text(this.getDisplayText(), 10, 10, EventScreen.BOX_WIDTH - 20, EventScreen.BOX_HEIGHT - 20);
+		textFont(mediumFontData);
+		textSize(18);
+		textAlign(LEFT, TOP);
+
+		// 获取需要显示的文本
+		const displayText = this.getDisplayText();
+		const wrappedLines = this.wrapText(displayText, EventScreen.BOX_WIDTH - 20); // 自动换行处理
+
+		let y = 10; // 初始 y 坐标
+		const lineHeight = 24; // 固定行高，确保行间距足够
+
+		for (const line of wrappedLines) {
+			if (line === "") {
+				// 如果是空行，直接增加 y 坐标，保留空行
+				y += lineHeight;
+			} else {
+				text(line, 10, y); // 绘制每一行文本
+				y += lineHeight; // 增加 y 坐标，确保下一行不会重叠
+			}
+		}
 
 		pop();
 
 		feed.render();
 		timeLoop.renderTimer();
+	}
+
+	/**
+	 * 自动换行函数：根据最大宽度将文本分割成多行，并保留空行
+	 * @param text 原始文本
+	 * @param maxWidth 最大宽度
+	 * @returns 分割后的多行文本数组
+	 */
+	wrapText(text: string, maxWidth: number): string[] {
+		const lines: string[] = [];
+		const paragraphs = text.split('\n'); // 按换行符分割段落
+
+		for (const paragraph of paragraphs) {
+			if (paragraph.trim() === "") {
+				// 如果段落是空的，保留空行
+				lines.push("");
+				continue;
+			}
+
+			let currentLine = "";
+
+			for (const char of paragraph) {
+				const testLine = currentLine + char;
+				if (textWidth(testLine) > maxWidth) {
+					lines.push(currentLine); // 当前行已满，保存
+					currentLine = char; // 开始新的一行
+				} else {
+					currentLine = testLine; // 继续添加字符
+				}
+			}
+
+			if (currentLine) {
+				lines.push(currentLine); // 保存最后一行
+			}
+		}
+
+		return lines;
 	}
 
 	onButtonUp(button: Button): void
@@ -92,14 +144,13 @@ export class DeathByAnglerfishScreen extends EventScreen
 	onEnter(): void
 	{
 		feed.clear();
-		feed.publish("you are eaten by an anglerfish", true);
+		feed.publish("你被鮟鱇鱼吃掉了", true);
 	}
 
 	getDisplayText(): string
 	{
-		return "As you fly towards the shining light, you realize it's actually the lure of a huge anglerfish!\n\nYou try to turn around, but it's too late - the anglerfish devours you in a single bite.\n\nThe world goes black...";
+		return "你在飞向闪耀的光芒时，突然意识到这实际上是巨型鮟鱇鱼的诱饵！\n\n你试图扭头就跑，但为时已晚 —— 鮟鱇鱼一口就把你吞没了\n\n世界变得一片漆黑...";
 	}
-
 	onContinue(): void
 	{
 		playerData.killPlayer();
@@ -111,12 +162,12 @@ export class DiveAttemptScreen extends EventScreen
 	onEnter(): void
 	{
 		feed.clear();
-		feed.publish("you try to dive underwater", true);
+		feed.publish("你尝试潜入水下", true);
 	}
 
 	getDisplayText(): string
 	{
-		return "You try to dive underwater, but a strong surface current prevents you from submerging more than a few hundred meters.";
+		return "你尝试潜入水下，但浅层强大的水流阻止你继续潜入几百米下的深水区";
 	}
 
 	onContinue(): void
@@ -140,7 +191,7 @@ export class TeleportScreen extends EventScreen
 	onExit(): void
 	{
 		feed.clear();
-		feed.publish("you are teleported to a new location", true);
+		feed.publish("你已被传送至新地点", true);
 	}
 
 	getDisplayText(): string
@@ -194,7 +245,7 @@ export class SectorArrivalScreen extends EventScreen
 	onEnter(): void
 	{
 		feed.clear();
-		feed.publish("you arrive at " + this._sectorName);
+		feed.publish("你已抵达" + this._sectorName);
 	}
 
 	getDisplayText(): string
@@ -225,22 +276,22 @@ export class QuantumArrivalScreen extends EventScreen
 		{
 			if (!this._photoTaken)
 			{
-				return "As you approach the Quantum Moon, a strange mist starts to obscure your vision...";
+				return "你接近了量子卫星, 一团奇怪的迷雾开始遮挡你的视线...";
 			}
 			else
 			{
-				return "You use your probe to take a snapshot of the moon mere moments before it's utterly obscured by the encroaching mist.";
+				return "在它被逐渐逼近的迷雾完全遮挡之前，你使用小侦察兵拍摄了卫星的照片";
 			}
 		}
 		else if (this._screenIndex == 1)
 		{
 			if (!this._photoTaken)
 			{
-				return "The mist completely engulfs your ship, then dissipates as suddenly as it appeared.\n\nYou scan your surroundings, but the Quantum Moon has mysteriously vanished.";
+				return "迷雾完全吞没了你的飞船，然后突然消散，就像它出现时那样\n\n你环顾四周，量子卫星已经神秘消失了";
 			}
 			else
 			{
-				return "You plunge into the mist, making sure to keep an eye on the photo you took just moments before.\n\nSuddenly a huge shape materializes out of the mist...you've made it to the surface of the Quantum Moon!";
+				return "你一头扎进雾中，确保自己盯着刚刚拍到的照片\n\n突然，巨大的形状从雾中浮现...你抵达了量子卫星的表面！";
 			}
 		}
 		return "";
@@ -256,7 +307,7 @@ export class QuantumArrivalScreen extends EventScreen
 		}
 		else
 		{
-			feed.publish("that doesn't help you right now", true);
+			feed.publish("那个现在还不能帮助到你", true);
 		}
 	}
 
@@ -290,18 +341,18 @@ export class QuantumEntanglementScreen extends EventScreen
 		super()
 		if (locator.player.currentSector.getName() === "Quantum Moon")
 		{
-			this._displayText = "You turn off your flashlight and the world becomes pitch black.\n\nWhen you turn the flashlight back on, your surroundings have changed...";
+			this._displayText = "你关闭了手电筒，世界变得一片漆黑\n\n当你重新打开手电筒时，四周的环境发生了变化...";
 		}
 		else
 		{
-			this._displayText = "You climb on top of the quantum rock and turn off your flashlight. It's so dark you can't even see your hand in front of your face.\n\nWhen you turn the flashlight back on, you're still standing on top of the quantum rock, but your surrounding have changed...";
+			this._displayText = "你爬上了量子碎片的顶部并关闭了手电筒。环境实在是太黑了，伸手不见五指\n\n当你重新打开手电筒时，你仍然站在量子碎片的顶部，但四周的环境发生了变化...";
 		}
 	}
 
 	onEnter(): void
 	{
 		feed.clear();
-		feed.publish("you become entangled with the quantum object");
+		feed.publish("你与量子物体一块发生纠缠现象了");
 	}
 
 	getDisplayText(): string
@@ -330,17 +381,17 @@ export class FollowTheVineScreen extends EventScreen
 	{
 		if (this._screenIndex == 0)
 		{
-			return "You launch your probe at one of the strangely-bluish flowers and it is promptly ingested. You follow your probe's tracking signal as the vine's vascular system carries it deep into the heart of Dark Bramble.\n\nYou're so focused on following the probe's signal, you don't notice the glowing lures until it's too late. You've flown straight into a nest of anglerfish!";
+			return "你向其中一朵怪异的蓝色花朵发射小侦察兵，它很快就被吞噬了。你跟随小侦察兵的追踪信号，顺着错综复杂的藤蔓进入黑荆星的中心深处\n\n你如此专注于跟随小侦察兵的信号，以至于你没有注意到发光的诱饵，但已为时已晚。你直接飞进了鮟鱇鱼的巢穴里！";
 		}
 		else if (this._screenIndex == 1)
 		{
 			if (!this._silentRunning)
 			{
-				return "You reverse your thrusters, but it's too late. The anglerfish lunge with terrifying speed and devour your spacecraft whole.";
+				return "你反转了飞船的推进器，但为时已晚。鮟鱇鱼飞速猛扑过来，吞噬了整个飞船";
 			}
 			else
 			{
-				return "Suddenly remembering the rules to an ancient children's game, you switch off your engines and silently drift into the nest.\n\nNone of the anglerfish seem to notice, and you safely reach the other side. You resume following the probe's signal, and it's not long before you reach an ancient derelict tangled in the roots of Dark Bramble.";
+				return "你突然想起了那个古老儿童游戏的规则，你关掉了引擎，悄悄地漂进了巢穴\n\n似乎没有鮟鱇鱼注意到你，你安全地到达了另一边。你继续跟随小侦察兵的信号前进，没过多久，你到达了一个纠缠于黑荆根部的古老遗迹";
 			}
 		}
 		return "";
@@ -370,7 +421,7 @@ export class FollowTheVineScreen extends EventScreen
 		}
 		else
 		{
-			feed.publish("that doesn't help you right now", true);
+			feed.publish("那个现在还不能帮助到你", true);
 		}
 	}
 
@@ -389,7 +440,7 @@ export class FollowTheVineScreen extends EventScreen
 			else
 			{
 				gameManager.popScreen();
-				messenger.sendMessage(new Message("move to", "Ancient Vessel"));
+				messenger.sendMessage(new Message("move to", "古飞船"));
 			}
 		}
 	}
@@ -403,12 +454,12 @@ export class AncientVesselScreen extends EventScreen
 	constructor()
 	{
 		super();
-		this._displayText = "You explore the derelict and eventually find the bridge. Although the ship's life support systems are dead, a few computer terminals are still running on some sort of auxiliary power. You find records of the original signal the Nomai received from the Eye of the Universe. According to their analysis, whatever the signal came from must be older than the Universe itself!\n\nYou poke around a bit more and discover that the ship's warp drive finished recharging a few hundred years ago.";
+		this._displayText = "你探索了这片废墟，最终找到了这里。尽管飞船的生命维持系统已经失效，但一些计算机终端仍在使用某种辅助电源运行。你找到了挪麦人从宇宙之眼接收的原始信号的记录。根据它们的分析，无论信号来自什么物体，都比宇宙本身更为古老！\n\n你又四处探查了一番，发现这艘船的跃迁装置在几百年前就完成了充能";
 	}
 
 	initButtons(): void
 	{
-		this.addButtonToToolbar(this._warpButton = new Button("Use Warp Drive", 0, 0, 150, 50));
+		this.addButtonToToolbar(this._warpButton = new Button("使用跃迁装置", 0, 0, 150, 50));
 		super.initButtons();
 	}
 
@@ -428,16 +479,16 @@ export class AncientVesselScreen extends EventScreen
 	    			gameManager.popScreen();
 	    			messenger.sendMessage(new Message("teleport to", "Ancient Vessel 2"));
 	    			feed.clear();
-	    			feed.publish("the ancient vessel warps to the coordinates of the Eye of the Universe");
+	    			feed.publish("古飞船跃迁到了宇宙之眼所在的坐标");
 	    		}
 	    		else
 	    		{
-	    			this._displayText = "You input the coordinates to the Eye of the Universe and try to use the warp drive, but it refuses to activate due to the presence of a 'massive temporal distortion'.";
+	    			this._displayText = "你输入了宇宙之眼的坐标并尝试使用跃迁装置，但由于存在“巨大的时间扭曲”，它拒绝启动'.";
 	    		}
 	    	}
 	    	else
 	    	{
-	    		this._displayText = "You try to use the warp drive, but apparently it won't activate without destination coordinates.";
+	    		this._displayText = "你试图使用跃迁装置，但没有目的地坐标，装置显然无法启动";
 	    	}
 	    }
 	    else if (button == this._nextButton)
@@ -467,10 +518,10 @@ export class TimeLoopCentralScreen extends EventScreen
 	{
 		if (this._screenIndex == 0)
 		{
-			return "You're inside a huge spherical chamber at the center of the sandy Hourglass Twin. The two giant antennae you saw outside extend below the surface and converge within an elaborate coil-like piece of Nomai technology at the center of the chamber. This must be the source of the time loop!\n\nYou discover a transmitter that automatically tells the Nomai space station in orbit around Giant's Deep to launch a probe at the start of each loop.\n\nThe time loop machine requires the energy from a supernova to alter the flow of time. The Nomai tried to artificially make the sun go supernova thousands of years ago, but their attempts were unsuccessful.";
+			return "你正位于灰烬双星中心的一个巨大球形舱内。你在外面看到的两根巨型天线延伸到了地表以下，并汇聚到了密室中心一个精心制作的线圈状的挪麦科技装置中。这一定就是时间循环的源头！\n\n你发现了一个信号发射器，它能自动通知深巨星轨道上的挪麦空间站在每次循环开始时发射一个探测器\n\n时间循环装置需要超新星的能量来改变时间的流逝。几千年前，挪麦人曾试人工激发超新星，但没有成功";
 		}
 
-		return "You eventually find a way to the center of the chamber and find what looks like the interface to the Time Loop Machine.\n\nDo you want to disable the time loop?";
+		return "你最终找到了通往密室中心的路，并找到了看起来像是时间循环机器的界面\n\n你想关闭时间循环吗？";
 	}
 
 	onButtonUp(button: Button): void
@@ -479,7 +530,7 @@ export class TimeLoopCentralScreen extends EventScreen
 		
 		if (button == this._yes)
 		{
-			messenger.sendMessage("disable time loop");
+			messenger.sendMessage("关闭时间循环");
 			gameManager.popScreen();
 		}
 		else if (button == this._no)
@@ -492,8 +543,8 @@ export class TimeLoopCentralScreen extends EventScreen
 	{
 		this._screenIndex++;
 		this.removeButtonFromToolbar(this._nextButton);
-		this.addButtonToToolbar(this._yes = new Button("Yes"));
-		this.addButtonToToolbar(this._no = new Button("No"));
+		this.addButtonToToolbar(this._yes = new Button("是"));
+		this.addButtonToToolbar(this._no = new Button("否"));
 	}
 }
 
@@ -505,10 +556,10 @@ export class EyeOfTheUniverseScreen extends EventScreen
 	{
 		if (this._screenIndex == 0)
 		{
-			return "As you apprach the strange energy cloud surrounding the Eye of the Universe, you see the last few stars die in the distance. The Universe has become a pitch black void of nothingness.\n\nThe cloud dissipates as you reach its center, revealing a strange spherical object floating in space. Beneath its shimmering surface you see billions of tiny lights. As you get closer, you realize these lights resemble clusters of stars and galaxies. Every time you look away from the sphere and back again, the configuration of stars and galaxies changes.\n\nYou fire your jetpack thrusters and move into the sphere itself...";
+			return "当你靠近围绕着宇宙之眼的奇特能量云时，你看到最后几颗恒星在远处爆发。宇宙变成了一片漆黑的虚无\n\n当你到达云层中心时，云层逐渐消散，露出一个漂浮在空中的奇特球形物体。在它闪闪发光的表面上，你看到了数十亿个光点。当你靠近时，你发现这些光点像是恒星和星系团。每当你把目光从球体上移开，再移回来时，恒星和星系的结构就会发生变化\n\n你启动了喷气背包，进入了球体...";
 		}
 
-		return "For the briefest moment you find yourself floating in a sea of stars and galaxies. Suddenly all of the stars collapse into a single point of light directly in front of you. Nothing happens for several seconds, then the point of light explodes outwards in a spectacular burst of energy. The shockwave slams into you and sends you careening away into space.\n\nYour life-support systems are failing, but you watch as energy and matter are spewed into space in all directions.\n\nAfter a while, your vision fades to black.";
+		return "有那么一瞬间，你发现自己漂浮在星辰和银河的海洋中。突然，所有的恒星都坍缩成你正前方的一个光点。前几秒什么都没有发生，然后光点突然向外爆发出惊人的能量。冲击波将你猛烈撞向了空中\n\n你的生命维持系统正在崩溃，而你只能眼睁睁地看着能量与物质四向喷向太空\n\n过了一会，你的视野正在逐渐变黑";
 	}
 
 	onContinue(): void
@@ -532,18 +583,18 @@ export class BrambleOutskirtsScreen extends EventScreen
 	initButtons(): void
 	{
 		this.addDatabaseButton();
-		this.addButtonToToolbar(this._yes = new Button("Yes"));
-		this.addButtonToToolbar(this._no = new Button("No"));
+		this.addButtonToToolbar(this._yes = new Button("是"));
+		this.addButtonToToolbar(this._no = new Button("否"));
 	}
 
 	getDisplayText(): string
 	{
 		if (this._screenIndex == 0)
 		{
-			return "You explore the outer perimeter of Dark Bramble, where the tips of its thorny vines end in massive alien-looking white flowers (along with a few bluish ones).\n\nYou notice a small opening near the center of each flower...do you want to move in for a closer look?";
+			return "你正在探索黑荆星的外围，藤蔓的顶端会开出巨大的异形白花（以及几朵蓝花）\n\n你注意到靠近每朵花中心的地方都有一个小开口...你想靠近仔细看看吗？";
 		}
 
-		return "As you approach, the flower opens and a strange force starts to pull you in. You desperately try to escape, but it's no use.\n\nYou are unceremoniously devoured by a giant space flower. You can hear yourself being digested as the world goes black...";
+		return "当你靠近时，花朵打开了，一股奇怪的力量开始把你推进去。你拼命想逃离，但没有用\n\n你被一朵巨大的花朵毫不留情地吞噬了。世界一片漆黑，你能听到自己被消化的声音...";
 	}
 
 	onButtonUp(button: Button): void
@@ -573,7 +624,7 @@ export class BrambleOutskirtsScreen extends EventScreen
 		}
 		else
 		{
-			feed.publish("that doesn't help you right now", true);
+			feed.publish("那个现在还不能帮助到你", true);
 		}
 	}
 

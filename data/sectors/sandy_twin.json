@@ -1,7 +1,7 @@
 {
-  "Sector Arrival": {"text": "The sandy Hourglass Twin is a largely featureless desert except for a few massive ancient structures.\n\nThere are four cylindrical towers of various sizes encircling the equator.\n\nTwo massive antenna-like structures protrude from the north and south poles.\n\nAn enormous funnel of sand stretches from one Hourglass twin to the other. Sand is flowing off the surface of the sandy twin and draining into the canyons and caverns of the rocky twin."},
+  "Sector Arrival": {"text": "灰烬双星是一片毫无特色的沙漠，只有一些高大的古建筑\n\n在赤道上有四个大小不一的圆柱形塔楼\n\n两个巨大的天线状结构分别从南北两极伸出\n\n巨大的沙漏从沙漏双星的一颗延伸到另一颗。沙子似乎从灰烬双星的表面流出，流入余烬双星的峡谷和洞穴中"},
   "Nodes": {
-    "Large Tower": {
+    "庞大的古塔": {
       "position": {
         "y": -1,
         "x": 211
@@ -9,29 +9,29 @@
       "explore": [
         {
           "on turn": 0,
-          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment the rocky Hourglass Twin is directly overhead.",
+          "text": "你走上了塔楼中央的圆形小平台\n塔楼没有天花板，当行星自转时，你可以看到天体在你头顶旋转\n\n此时此刻，余烬双星就在头顶上",
           "turn cycle": 4
         },
         {
           "on turn": 1,
-          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment Timber Hearth is directly overhead.",
+          "text": "你走上了塔楼中央的圆形小平台\n塔楼没有天花板，当行星自转时，你可以看到天体在你头顶旋转\n\n此时此刻，木灶星就在头顶上",
           "turn cycle": 4
         },
         {
           "on turn": 2,
-          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment Brittle Hollow is directly overhead.",
+          "text": "你走上了塔楼中央的圆形小平台\n塔楼没有天花板，当行星自转时，你可以看到天体在你头顶旋转\n\n此时此刻，碎空星就在头顶上",
           "turn cycle": 4
         },
         {
           "on turn": 3,
-          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment Giant's Deep is directly overhead.\n\nSuddenly the tower fills with light, and the world around you vanishes!",
-          "teleport to": "Small Island",
+          "text": "你走上了塔楼中央的圆形小平台\n塔楼没有天花板，当行星自转时，你可以看到天体在你头顶旋转\n\n此时此刻，深巨星就在头顶上\n\n突然，塔内充满光芒，周围的世界消失了！",
+          "teleport to": "一座小岛",
           "turn cycle": 4
         }
       ],
-      "description": "a very large ancient tower"
+      "description": "一座庞大的古塔"
     },
-    "Mottled Tower": {
+    "破旧的古塔": {
       "position": {
         "y": -1,
         "x": -209
@@ -39,29 +39,29 @@
       "explore": [
         {
           "on turn": 0,
-          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment the rocky Hourglass Twin is directly overhead.",
+          "text": "你走上了塔楼中央的圆形小平台\n塔楼没有天花板，当行星自转时，你可以看到天体在你头顶旋转\n\n此时此刻，余烬双星就在头顶上",
           "turn cycle": 4
         },
         {
           "on turn": 1,
-          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment Timber Hearth is directly overhead.\n\nSuddenly the tower fills with light, and the world around you vanishes!",
-          "teleport to": "Crater",
+          "text": "你走上了塔楼中央的圆形小平台\n塔楼没有天花板，当行星自转时，你可以看到天体在你头顶旋转\n\n此时此刻，木灶星就在头顶上\n\n突然，塔内充满光芒，周围的世界消失了！",
+          "teleport to": "古矿坑",
           "turn cycle": 4
         },
         {
           "on turn": 2,
-          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment Brittle Hollow is directly overhead.",
+          "text": "你走上了塔楼中央的圆形小平台\n塔楼没有天花板，当行星自转时，你可以看到天体在你头顶旋转\n\n此时此刻，碎空星就在头顶上",
           "turn cycle": 4
         },
         {
           "on turn": 3,
-          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment Giant's Deep is directly overhead.",
+          "text": "你走上了塔楼中央的圆形小平台\n塔楼没有天花板，当行星自转时，你可以看到天体在你头顶旋转\n\n此时此刻，深巨星就在头顶上",
           "turn cycle": 4
         }
       ],
-      "description": "an ancient tower riddled with holes"
+      "description": "一座千疮百孔的古塔"
     },
-    "Cracked Tower": {
+    "残破的古塔": {
       "position": {
         "y": -194,
         "x": -2
@@ -69,44 +69,44 @@
       "explore": [
         {
           "on turn": 0,
-          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment the rocky Hourglass Twin is directly overhead.",
+          "text": "你走上了塔楼中央的圆形小平台\n塔楼没有天花板，当行星自转时，你可以看到天体在你头顶旋转\n\n此时此刻，余烬双星就在头顶上",
           "turn cycle": 4
         },
         {
           "on turn": 1,
-          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment Timber Hearth is directly overhead.",
+          "text": "你走上了塔楼中央的圆形小平台\n塔楼没有天花板，当行星自转时，你可以看到天体在你头顶旋转\n\n此时此刻，木灶星就在头顶上",
           "turn cycle": 4
         },
         {
           "on turn": 2,
-          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment Brittle Hollow is directly overhead.\n\nSuddenly the tower fills with light, and the world around you vanishes!",
-          "teleport to": "Glacial Shelf",
+          "text": "你走上了塔楼中央的圆形小平台\n塔楼没有天花板，当行星自转时，你可以看到天体在你头顶旋转\n\n此时此刻，碎空星就在头顶上\n\n突然，塔内充满光芒，周围的世界消失了！",
+          "teleport to": "冰川陆架",
           "turn cycle": 4
         },
         {
           "on turn": 3,
-          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment Giant's Deep is directly overhead.",
+          "text": "你走上了塔楼中央的圆形小平台\n塔楼没有天花板，当行星自转时，你可以看到天体在你头顶旋转\n\n此时此刻，深巨星就在头顶上",
           "turn cycle": 4
         }
       ],
-      "description": "a heavily-fractured ancient tower"
+      "description": "一座断壁残垣的古塔"
     },
-    "Time Loop Central": {
+    "时间循环中心": {
       "position": {
         "y": 80,
         "x": -3
       },
       "explore": {
-        "text": "see Time Loop Central event screen",
+        "text": "查看时间循环中心事件屏幕",
         "fire event": "time loop central",
         "reveal paths": [
-          "Twin Towers"
+          "成对的古塔"
         ]
       },
       "entry point": false,
-      "description": "a secret chamber at the heart of the sandy Hourglass Twin"
+      "description": "灰烬双星中心的密室"
     },
-    "Twin Towers": {
+    "成对的古塔": {
       "position": {
         "y": 218,
         "x": -2
@@ -114,67 +114,67 @@
       "explore": [
         {
           "on turn": 0,
-          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment the rocky Hourglass Twin is directly overhead.\n\nSuddenly the tower fills with light, and the world around you vanishes!",
-          "teleport to": "Time Loop Central",
+          "text": "你走上了塔楼中央的圆形小平台\n塔楼没有天花板，当行星自转时，你可以看到天体在你头顶旋转\n\n此时此刻，余烬双星就在头顶上\n\n突然，塔内充满光芒，周围的世界消失了！",
+          "teleport to": "时间循环中心",
           "turn cycle": 4
         },
         {
           "on turn": 1,
-          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment Timber Hearth is directly overhead.",
+          "text": "你走上了塔楼中央的圆形小平台\n塔楼没有天花板，当行星自转时，你可以看到天体在你头顶旋转\n\n此时此刻，木灶星就在头顶上",
           "turn cycle": 4
         },
         {
           "on turn": 2,
-          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment Brittle Hollow is directly overhead.",
+          "text": "你走上了塔楼中央的圆形小平台\n塔楼没有天花板，当行星自转时，你可以看到天体在你头顶旋转\n\n此时此刻，碎空星就在头顶上",
           "turn cycle": 4
         },
         {
           "on turn": 3,
-          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment Giant's Deep is directly overhead.",
+          "text": "你走上了塔楼中央的圆形小平台\n塔楼没有天花板，当行星自转时，你可以看到天体在你头顶旋转\n\n此时此刻，深巨星就在头顶上",
           "turn cycle": 4
         }
       ],
-      "description": "two small ancient towers connected by a short walkway"
+      "description": "由一条短道连接起来的两座小古塔"
     },
-    "Giant Antenna": {
+    "巨型天线": {
       "position": {
         "y": -1,
         "x": -2
       },
-      "explore": "A giant antenna protrudes out of the sand and towers above you.\nYou find what used to be a hatch leading into the center of the planet, but it has been sealed shut.",
+      "explore": "一根巨大的天线从沙地中伸出，耸立在你的头顶\n你发现了一个曾经通往星球中心的舱门，但它现在已经被封死了",
       "entry point": true,
-      "description": "a massive antenna-like structure"
+      "description": "巨型天线状结构"
     }
   },
   "Connections": [
     {
-      "Node 2": "Mottled Tower",
-      "Node 1": "Twin Towers"
+      "Node 2": "破旧的古塔",
+      "Node 1": "成对的古塔"
     },
     {
-      "Node 2": "Cracked Tower",
-      "Node 1": "Mottled Tower"
+      "Node 2": "残破的古塔",
+      "Node 1": "破旧的古塔"
     },
     {
-      "Node 2": "Large Tower",
-      "Node 1": "Cracked Tower"
+      "Node 2": "庞大的古塔",
+      "Node 1": "残破的古塔"
     },
     {
-      "Node 2": "Twin Towers",
-      "Node 1": "Large Tower"
+      "Node 2": "成对的古塔",
+      "Node 1": "庞大的古塔"
     },
     {
-      "Node 2": "Mottled Tower",
-      "Node 1": "Giant Antenna"
+      "Node 2": "破旧的古塔",
+      "Node 1": "巨型天线"
     },
     {
-      "Node 2": "Large Tower",
-      "Node 1": "Giant Antenna"
+      "Node 2": "庞大的古塔",
+      "Node 1": "巨型天线"
     },
     {
-      "Node 2": "Twin Towers",
+      "Node 2": "成对的古塔",
       "one-way": true,
-      "Node 1": "Time Loop Central",
+      "Node 1": "时间循环中心",
       "hidden": true
     }
   ]

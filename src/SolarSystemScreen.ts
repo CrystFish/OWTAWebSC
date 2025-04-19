@@ -137,7 +137,7 @@ export class SolarSystemTelescopeScreen extends SolarSystemScreen
     this.addButton(this._nextFrequency = new FrequencyButton(true));
     this.addButton(this._previousFrequency = new FrequencyButton(false));
 
-    this.addButtonToToolbar(this._exitButton = new Button("Exit", 0, 0, 150, 50));
+    this.addButtonToToolbar(this._exitButton = new Button("退出", 0, 0, 150, 50));
 
     this._telescope = telescope;
   }
@@ -217,8 +217,8 @@ export class SolarSystemMapScreen extends SolarSystemScreen
   constructor(solarSystem: SolarSystem)
   {
     super(solarSystem);
-    this.addButtonToToolbar(this._databaseButton = new Button("View Database", 0, 0, 150, 50));
-    this.addButtonToToolbar(this._telescopeButton = new Button("Scan For Signals", 0, 0, 150, 50));
+    this.addButtonToToolbar(this._databaseButton = new Button("查看数据库", 0, 0, 150, 50));
+    this.addButtonToToolbar(this._telescopeButton = new Button("扫描信号", 0, 0, 150, 50));
   }
 
   render(): void

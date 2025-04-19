@@ -1,126 +1,126 @@
 {
-  "Sector Arrival": {"text": "Brittle Hollow is both brittle and hollow. The surface is under constant bombardment from its volcanic moon, and every so often a piece of crust breaks free and tumbles into the black hole at the center of the planet.\n\nWatch your step."},
+  "Sector Arrival": {"text": "碎空星又破碎又空洞。地表不断受到其火山卫星的轰炸，每隔一段时间就会有一块地壳脱落并坠入到行星中心的黑洞中\n\n小心脚下"},
   "Nodes": {
-    "Archaeologist's Camp": {
+    "考古学家的营地": {
       "position": {
         "y": -205,
         "x": -1
       },
-      "explore": {"text": "You find a fellow traveler strumming a banjo next to a campfire.\n\nThey tell you about a mural in the nearby ruins to the South that depicts the journey of the Nomai to your Solar System.\n\nApparently they came here looking for something..."},
-      "description": "a wooded clearing with a burning campfire",
+      "explore": {"text": "你发现一位旅行者在篝火旁弹奏班卓琴\n\n这位旅行者告诉你南部附近的废墟里有一组壁画，描绘了挪麦人来到太阳系的旅程\n\n显然他们来到这里是为了寻找什么..."},
+      "description": "一片树木繁茂的空地，篝火熊熊燃烧",
       "signal": "TRAVELER",
       "campfire": true
     },
-    "Cliff Dwellings": {
+    "悬崖古屋": {
       "position": {
         "y": -96,
         "x": -1
       },
       "explore": {
-        "text": "You discover an ancient mural with 5 panels.\n\nPanel 1 depicts an interstellar Nomai Vessel receiving a signal from the Eye of the Universe (depicted next to your solar system).\n\nPanel 2 shows the Vessel trapped in Dark Bramble.\n\nPanel 3 shows 3 escape pods being launched from the Vessel.\n\nPanel 4 shows an escape pod being pursued by a giant anglerfish.\n\nPanel 5 shows 1 escape pod crashed on Brittle Hollow, 1 crashed on the Hourglass Twins, and 1 crashed in Dark Bramble.",
+        "text": "你发现了五幅古壁画\n\n壁画一描绘了一艘挪麦飞船接收到了来自宇宙之眼的信号（被描绘在你所在太阳系的旁边）\n\n壁画二描绘了挪麦飞船被困在黑荆星的场景\n\n壁画三描绘了飞船放出了三艘逃生舱\n\n壁画四描绘了一艘逃生舱被一条巨大的鮟鱇鱼追逐的场面\n\n壁画五描绘了一艘救生艇坠毁在碎空星，一艘坠毁在沙漏双星，还有一艘坠毁在黑荆星",
         "discover clue": "D_1"
       },
-      "description": "ancient dwellings perched on the side of a cliff"
+      "description": "一座悬崖边的古屋"
     },
-    "Glacial Shelf": {
+    "冰川陆架": {
       "position": {
         "y": 128,
         "x": -128
       },
-      "explore": "You investigate the dreamcatcher-like structure and notice fine grains of sand on a flat circular platform at the center.",
-      "description": "an icy cavern with an alien structure that looks like a dreamcatcher"
+      "explore": "你调查了这个类似捕梦网的结构，并注意到中心平坦的圆形平台上有细小沙粒",
+      "description": "一个冰穴，内有结构类似捕梦网的外星建筑"
     },
-    "Wooded Crater": {
+    "树木密布的陨石坑": {
       "position": {
         "y": -61,
         "x": -193
       },
-      "explore": "You discover an abandoned campsite and notes belonging to a fellow traveler. It appears they left not too long ago to investigate the ancient ruins at the North Pole.\n\nAnother note mentions the existence of newer ruins to the South.",
+      "explore": "你发现了一个被废弃的营地和另一位旅行者的笔记。看来这位旅行者不久前离开去调查北极的遗迹了\n\n另一条笔记提到南部存在较新的废墟",
       "entry point": true,
-      "description": "a tree-filled crater with a smoldering campfire",
+      "description": "一个被森林覆盖的陨石坑，篝火冒着烟",
       "campfire": true
     },
-    "Black Hole Station": {
+    "黑洞站": {
       "position": {
         "y": 66,
         "x": 1
       },
       "explore": {
-        "text": "You find a Nomai research station analysing the black hole at the center of the planet. The Nomai used this research to develop a new method of teleportation involving two components: a transmitter tower and a receiver platform. These teleporters only activate when the transmitter is aimed at its corresponding receiver.\n\nThe Nomai constructed a network of these teleporters (one for each planet) on the Sandy Hourglass Twin to facilitate the construction of a giant machine on the Sandy Hourglass Twin.",
+        "text": "你发现了一个分析行星中心黑洞的挪麦研究站。挪麦人利用这项研究开发了一种新的传送方法，涉及两个结构：发射塔和接收平台。这些传送装置仅在发射塔瞄准其对应的接收平台时激活\n\n挪麦人在灰烬双星上建造了一个由这些传送器组成的网络（每个行星一个），以推进在灰烬双星上建造某个巨型机器的进度",
         "discover clue": "TLD_2"
       },
-      "description": "an ancient research station dangling precariously over the black hole"
+      "description": "一个危悬在黑洞之上的古研究站"
     },
-    "Ancient Tower": {
+    "古塔": {
       "position": {
         "y": 128,
         "x": 125
       },
       "explore": [
         {
-          "text": "You discover ancient records about the Quantum Moon. The Quantum Moon sometimes visits a 5th location outside the Solar System. The Nomai discovered a way to ride the Quantum Moon to this location, where they witnessed the Source of the Signal.",
+          "text": "你发现了有关量子卫星的古老记录。量子卫星有时会到达太阳系外的第五个位置。挪麦人发现了一种通过量子卫星抵达这个地方的方法，在那里他们见到了信号的源头",
           "discover clue": "QM_3"
         },
-        {"text": "You try to enter the tower through its base, but the entry ramp has long-since disintegrated and the pull of gravity is too strong..."}
+        {"text": "你试图从塔底进入塔中，但入口的通道早已解体，而重力的牵引力太强..."}
       ],
       "entry point": true,
-      "description": "an ancient tower jutting through the planet's crust",
+      "description": "一座横穿地壳的古塔",
       "signal": "QUANTUM"
     },
-    "Ancient Observatory": {
+    "古天文台": {
       "position": {
         "y": 216,
         "x": 0
       },
       "explore": {
-        "text": "You discover what looks like an analysis of weather patterns on Giant's Deep. According to the findings, most tornadoes on Giant's Deep have strong upward winds, but some tornadoes rotate counterclockwise and have downward winds.\n\nYou find schematics for a large probe launcher that was built in orbit around Giant's Deep.\n\nIn another corner you find records that the Nomai observed the Quantum Moon in 4 locations - Hourglass Twins, Brittle Hollow, Timber Hearth, and Giants Deep - noting that sometimes it would vanish completely.",
+        "text": "你发现了一项似乎是与深巨星天气模式有关的研究。研究结果显示，深巨星上的大多数龙卷风都有强烈的上升气流，但有些龙卷风逆时针旋转并伴随着下行气流\n\n你找到一个大型探测器发射器的示意图，这个发射器建在环绕深巨星的轨道上\n\n在另一个角落，你找到了挪麦人在四个地点观测量子月亮的记录——沙漏双星、碎空星、木炉星和深巨星——并指出有时它会完全消失不见",
         "discover clue": "APL_2"
       },
-      "description": "a cavern filled with ancient technology"
+      "description": "一个塞满了古人科技的洞穴"
     },
-    "Escape Pod Crash Site": {
+    "逃生舱坠毁点": {
       "position": {
         "y": -58,
         "x": 178
       },
-      "explore": "You discover a crashed ancient escape pod. According to its logs, it was launched from somewhere inside Dark Bramble.\n\nIt looks like the Nomai evacuated the crash site and headed for the North Pole.",
+      "explore": "你发现了一个坠毁的逃生舱。根据日志描述，它是从黑荆星内部的某处发射的\n\n看起来挪麦人逃离了逃生舱，并前往了北极",
       "entry point": true,
-      "description": "a crater with a crashed ancient escape pod",
+      "description": "一个内含坠毁逃生舱的陨石坑",
       "signal": "BEACON"
     }
   },
   "Connections": [
     {
-      "Node 2": "Glacial Shelf",
-      "Node 1": "Wooded Crater"
+      "Node 2": "冰川陆架",
+      "Node 1": "树木密布的陨石坑"
     },
     {
-      "Node 2": "Ancient Observatory",
-      "Node 1": "Glacial Shelf"
+      "Node 2": "古天文台",
+      "Node 1": "冰川陆架"
     },
     {
-      "Node 2": "Black Hole Station",
-      "Node 1": "Glacial Shelf"
+      "Node 2": "黑洞站",
+      "Node 1": "冰川陆架"
     },
     {
-      "Node 2": "Archaeologist's Camp",
-      "Node 1": "Wooded Crater"
+      "Node 2": "考古学家的营地",
+      "Node 1": "树木密布的陨石坑"
     },
     {
-      "Node 2": "Archaeologist's Camp",
-      "Node 1": "Escape Pod Crash Site"
+      "Node 2": "考古学家的营地",
+      "Node 1": "逃生舱坠毁点"
     },
     {
-      "Node 2": "Ancient Tower",
-      "Node 1": "Escape Pod Crash Site"
+      "Node 2": "古塔",
+      "Node 1": "逃生舱坠毁点"
     },
     {
-      "Node 2": "Glacial Shelf",
-      "Node 1": "Ancient Tower"
+      "Node 2": "冰川陆架",
+      "Node 1": "古塔"
     },
     {
-      "Node 2": "Cliff Dwellings",
-      "Node 1": "Archaeologist's Camp"
+      "Node 2": "悬崖古屋",
+      "Node 1": "考古学家的营地"
     }
   ]
 }

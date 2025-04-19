@@ -48,14 +48,14 @@ export abstract class NodeAction
 	{
 		if (this._mouseButton == LEFT)
 		{
-			this._prompt += "L-Clk - " + description;
+			this._prompt += "左键 - " + description;
 		}
 		else
 		{
-			this._prompt += "R-Clk - " + description;
+			this._prompt += "右键 - " + description;
 		}
 
-		this._prompt += " [" + this.getCost() + " min]";
+		this._prompt += " [ " + this.getCost() + " 分钟 ]";
 	}
 }
 
@@ -71,12 +71,12 @@ export class ProbeAction extends NodeAction
 		this._location = location;
 		this.setMouseButton(button);
 		this.setObserver(observer);
-		this.setPrompt("probe");
+		this.setPrompt("发射侦察兵");
 	}
 
 	execute(): void
 	{
-		feed.publish("you see " + this._location.getProbeDescription());
+		feed.publish("你看见了" + this._location.getProbeDescription());
 
 		const probe: Actor = new Probe();
 		this._player.currentSector.addActor(probe);
@@ -97,7 +97,7 @@ export class ExploreAction extends NodeAction
 		this._location = location;
 		this.setMouseButton(button);
 		this.setObserver(observer);
-		this.setPrompt("explore");
+		this.setPrompt("探索");
 	}
 
 	getCost(): number
@@ -116,7 +116,7 @@ export class ExploreAction extends NodeAction
 		}
 
 		feed.clear();
-		feed.publish("you explore the " + this._location.getActualName());
+		feed.publish("你探索了" + this._location.getActualName());
 		
 		this._observer.onExploreNode(this._location);
 		gameManager.pushScreen(new ExploreScreen(this._location));
@@ -148,18 +148,18 @@ export class TravelAction extends NodeAction
 		{
 			if (this._ship.currentNode == null && this._destination.gravity)
 			{
-				this.setPrompt("land here");
+				this.setPrompt("降落到此处");
 				return;
 			}
-			this.setPrompt("fly here");
+			this.setPrompt("飞到此处");
 		}
 		else if (this._destination.gravity)
 		{
-			this.setPrompt("hike here");
+			this.setPrompt("移动到此处");
 		}
 		else
 		{
-			this.setPrompt("jetpack here");
+			this.setPrompt("飞到此处");
 		}
 	}
 
@@ -190,7 +190,7 @@ export class TravelAction extends NodeAction
 
 				if (connection.hasDescription())
 				{
-					feed.publish("you traverse " + connection.getDescription());
+					feed.publish("你穿过了" + connection.getDescription());
 				}
 			}
 		}
@@ -198,7 +198,7 @@ export class TravelAction extends NodeAction
 		// publish feed first in case we want to override it (e.g. death-by-anglerfish scenario)
 		if (this._destination.hasDescription())
 		{
-			feed.publish("you reach " + this._destination.getDescription());
+			feed.publish("你已抵达" + this._destination.getDescription());
 		}
 
 		if (this._ship != null)

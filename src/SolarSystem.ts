@@ -60,7 +60,7 @@ export class SolarSystem implements GlobalObserver
   {
     if (message.id === "spawn ship")
     {
-      this.timberHearth.addActor(this.ship, "Village");
+      this.timberHearth.addActor(this.ship, "村庄");
 
       // keeps player on top of ship
       const tNode: OWNode = this.player.currentNode;
@@ -79,7 +79,7 @@ export class SolarSystem implements GlobalObserver
       }
 
       feed.clear();
-      feed.publish("you reach " + node.getDescription());
+      feed.publish("你已抵达" + node.getDescription());
     }
     else if (message.id === "teleport to")
     {
@@ -94,7 +94,7 @@ export class SolarSystem implements GlobalObserver
           gameManager.loadSector(this._sectorList[i]);
 
           feed.clear();
-          feed.publish("you are teleported to " + teleportNode.getDescription());
+          feed.publish("你已被传送至" + teleportNode.getDescription());
         }
       }
     }
