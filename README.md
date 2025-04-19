@@ -1,6 +1,6 @@
 # ⌈Outer Wilds：文字冒险⌋ 汉化网页版
 
-[原项目](https://github.com/Hawkbat/OuterWildsTextAdventureWeb) 为 [Outer Wilds Text Adventure](https://www.mobiusdigitalgames.com/outer-wilds-text-adventure.html) 的网页移植版本，本项目为网页版提供了完整的简体中文本地化支持，访问 [crystfish.github.io/owta](https://crystfish.github.io/owta/) 在浏览器内体验文字版星际拓荒的魅力
+[原项目](https://github.com/Hawkbat/OuterWildsTextAdventureWeb) 为 [Outer Wilds Text Adventure](https://www.mobiusdigitalgames.com/outer-wilds-text-adventure.html) 的网页移植版本，本项目为网页版提供了完整的简体中文本地化支持，访问 [crystfish.github.io/OWTAWebSC](https://crystfish.github.io/OWTAWebSC/) 在浏览器内体验文字版星际拓荒的魅力
 
 当然你也可以在 [这里](https://github.com/CrystFish/OWTASC) 下载游玩已经汉化的 Java 原始程序
 
